@@ -28,7 +28,7 @@ int main()
 
     //promedio= (float)suma/contador;
     promedio=sacarPromedio(suma,contador);
-    printf(" su promedio es: %f",promedio);
+    printf(" su promedio es: %.4f",promedio);
 
 
     return 0;
