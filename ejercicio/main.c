@@ -61,16 +61,20 @@ int main()
     int ordenMin;
     int sumaNegativos=0;
     int diferencia;
-    int contadorEntre;
+    int contadorEntre=0;
 
 
     limite=dameNumero();
     while(contador<limite)
     {
         contador++;
-        printf("\n ingrese un numero :");
+        printf("\n ingrese un numero entre -500 y 500:");
         scanf("%d",&numero);
-        suma=suma+numero;
+        while(numero<-500 || numero>500)
+        {
+            printf("\n incorrecto, ingrese un numero valido:");
+            scanf("%d",&numero);
+        }
 
         if(numero%2==0 && numero!=0)
         {
@@ -108,17 +112,10 @@ int main()
             ordenMin=contador;
         }
 
-        if(numero>=-239)
+        if(numero>-240 && numero<6)
         {
-            if(numero<=5)
-            {
-                contadorEntre++;
-            }
+            contadorEntre++;
         }
-
-
-
-
     }
 
 
@@ -133,7 +130,8 @@ int main()
     printf("\n el numero maximo es %d y el minimo es %d,\n siendo el maximo ingresado en la %d vez y el minimo en la %d vez",maximo,minimo,ordenMax,ordenMin);
     printf("\n la suma de los negativos es %d",sumaNegativos);
     printf("\n la diferencia entre los negativos y positivos es %d",diferencia);
-    printf("\n hay %d numeros entre -239 y 5",contadorEntre);
+    printf("\n hay %d numeros entre -239 y 5 \n",contadorEntre);
+    system("pause");
 
 
 
