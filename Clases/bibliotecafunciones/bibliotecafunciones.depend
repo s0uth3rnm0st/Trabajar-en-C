@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
-1553781409 source:d:\11111111111111111\trabajar-en-c\clases\bibliotecafunciones\main.c
+1553785568 source:d:\11111111111111111\trabajar-en-c\clases\bibliotecafunciones\main.c
 	<stdio.h>
 	<stdlib.h>
 	"biblioteca.h"
 
 1553781226 d:\11111111111111111\trabajar-en-c\clases\bibliotecafunciones\biblioteca.h
 
-1553781389 source:d:\11111111111111111\trabajar-en-c\clases\bibliotecafunciones\biblioteca.c
+1553782630 source:d:\11111111111111111\trabajar-en-c\clases\bibliotecafunciones\biblioteca.c
 

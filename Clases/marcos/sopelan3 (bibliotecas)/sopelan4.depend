@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1553779721 source:c:\users\alumno\desktop\sopelan\sopelan4\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1553781683 source:c:\users\alumno\desktop\sopelan\sopelan3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"bibloteca.h"
+
+1553781217 source:c:\users\alumno\desktop\sopelan\sopelan3\bibloteca.c
+
+1553781218 c:\users\alumno\desktop\sopelan\sopelan3\bibloteca.h
+

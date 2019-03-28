@@ -6,7 +6,7 @@ int cambiarValor(int valor)
 
 int cambiarValorReferencia(int* valor)
 {
-    printf("el valor es: %d",valor);
+    printf("el valor es: %d",*valor);
     *valor=999;   //puntero---> *algo, por parametro es &algo, *valor es la direccion de la ram, ahora llamada 999
     return 1;
 }
