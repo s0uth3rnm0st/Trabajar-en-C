@@ -1,0 +1,4 @@
+bibliotecafunciones: esta correcto, muestra 333 333 999,
+pero faltan unos prototipos en una biblioteca, usar la carpeta github por las dudas
+
+github: esta correcto, muestalo respesctivo a los char y \0
