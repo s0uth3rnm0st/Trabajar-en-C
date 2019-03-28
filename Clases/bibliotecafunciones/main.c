@@ -57,11 +57,11 @@ int main()
     es=esUnNumero(palabra);
     if(es==1)
     {
-        printf("no es correcto");
+        printf("es correcto");
     }
     else
     {
-    printf(" es correcto");
+    printf("no es correcto");
     }
     /*
     int indice=0;
