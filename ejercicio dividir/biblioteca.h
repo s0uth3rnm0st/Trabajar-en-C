@@ -3,6 +3,6 @@
 
 int dividir(int datoUno, int datoDos, float *resultado);
 
-
+int pedirDato(int *dato);
 
 #endif // BIBLIOTECA_H_INCLUDED

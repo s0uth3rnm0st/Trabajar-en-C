@@ -6,8 +6,13 @@ int main()
 {
     int sePudo;
     float respuesta;
+    int datoUno;
+    int datoDos;
 
-    sePudo=dividir(10,3,&respuesta);
+    pedirDato(&datoUno);
+    pedirDato(&datoDos);
+
+    sePudo=dividir(datoUno,datoDos,&respuesta); //LA FUNCION RETORNA SI SE PUDO O NO!!
     if(sePudo==1)
     {
         printf("la respuesta es %f",respuesta);
@@ -17,3 +22,4 @@ int main()
         printf("no se puede");
     }
 }
+
