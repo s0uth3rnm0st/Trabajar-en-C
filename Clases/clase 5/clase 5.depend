@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1554379346 source:d:\asd\clase 5\clase 5\biblioteca.c
+
+1554384950 source:d:\asd\clase 5\clase 5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
