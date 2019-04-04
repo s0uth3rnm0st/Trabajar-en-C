@@ -3,7 +3,7 @@
 #include <string.h>
 
 void mostrarVector(int datos[], int tamanio);
-void mostrarPalabras(char palabras[],int tamanio);
+void mostrarPalabras(char datos[][10],int tamanio);
 void cargarVector(int datos[], int tamanio);
 
 
@@ -21,6 +21,7 @@ int main()
         printf("hello %s - nota:%d \n",usuario[i],nota[i]);
     }
 
+    mostrarPalabras(usuario,5);
     mostrarVector(nota,5);
     cargarVector(nota,5);
     mostrarVector(nota,5);
@@ -114,12 +115,13 @@ void mostrarVector(int datos[], int tamanio)
     }
 }
 
-void mostrarPalabras(char palabras[],int tamanio)
+void mostrarPalabras(char datos[][10],int tamanio)
 {
-    char
-
-    scanf("%c",palabras);
-    printf("%c",palabras);
+    int i;
+    for(i=0;i<tamanio;i++)
+    {
+        printf("nombre: %s\n",datos[i]);
+    }
 }
 
 void cargarVector(int datos[], int tamanio)
@@ -127,6 +129,6 @@ void cargarVector(int datos[], int tamanio)
     int i;
     for(i=0;i<tamanio;i++)
     {
-        datos[i]=1;
+        datos[i]=-1;
     }
 }
