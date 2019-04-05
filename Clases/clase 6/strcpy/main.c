@@ -18,7 +18,7 @@ int main()
     printf("\nsu nombre es: %s\n",nombre);
 }
 
-/*preacticar
+/*practicar:
 en una var nombre
 en otra apellido
 en otra apellidoNombre
