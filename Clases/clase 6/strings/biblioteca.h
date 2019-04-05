@@ -1,6 +1,9 @@
 #ifndef BIBLIOTECA_H_INCLUDED
 #define BIBLIOTECA_H_INCLUDED
 
+//todos lod define en el .h
+
+
 void mostrarArray (int [], int tam);
 
 void cargarArray(int [], int);
