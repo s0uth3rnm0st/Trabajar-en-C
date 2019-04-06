@@ -9,3 +9,13 @@
 
 1554469998 d:\asd\trabajar-en-c\clases\clase 6\strings\biblioteca.h
 
+1554551617 source:d:\nueva carpeta\trabajar-en-c\clases\clase 6\strings\biblioteca.c
+	"biblioteca.h"
+
+1554551617 d:\nueva carpeta\trabajar-en-c\clases\clase 6\strings\biblioteca.h
+
+1554551617 source:d:\nueva carpeta\trabajar-en-c\clases\clase 6\strings\main.c
+	<stdio.h>
+	<stdlib.h>
+	"biblioteca.h"
+

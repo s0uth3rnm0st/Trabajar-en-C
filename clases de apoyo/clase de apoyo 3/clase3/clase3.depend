@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1554551825 source:d:\nueva carpeta\trabajar-en-c\clases de apoyo\clase de apoyo 3\clase3\biblioteca.c
+
+1554561083 source:d:\nueva carpeta\trabajar-en-c\clases de apoyo\clase de apoyo 3\clase3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"biblioteca.h"
+	<string.h>
+
+1554557455 d:\nueva carpeta\trabajar-en-c\clases de apoyo\clase de apoyo 3\clase3\biblioteca.h
+
