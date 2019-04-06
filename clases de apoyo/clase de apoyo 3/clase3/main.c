@@ -7,7 +7,6 @@ int dameEdad(int *edad, char *mensaje);
 int dameEdadDos(int *edad, char *mensaje);
 int dameEdadTres(int *edad, char *mensaje); //validacion de enteros
 
-
 int main()
 {
     int edad;
@@ -20,27 +19,9 @@ int main()
 
     printf("la edad ingresa es: %d",edad);
 
-    /*if(dameEdadTres(&edad,"dame la edad ")==1)
-    {
-        printf("la edad es %d",edad);
-    }
-    else
-    {
-        printf("no se puedo");
-    }
-    */
     return 0;
 }
 
-/***************************************************/
-/** \brief paso un mensaje
- *
- * \param edad int* edad ingresada
- * \param mensaje char* pregunta la edad
- * \return int devuelve si se pudo o no
- *
- */
-/***************************************************/
 int dameEdad(int *edad, char *mensaje)
 {
     int sePudo=0;
@@ -53,7 +34,6 @@ int dameEdad(int *edad, char *mensaje)
     }
     return sePudo;
 }
-
 
 int dameEdadDos(int *edad, char *mensaje)
 {
@@ -88,3 +68,4 @@ int dameEdadTres(int *edad, char *mensaje)
 
     return sePudo;
 }
+
