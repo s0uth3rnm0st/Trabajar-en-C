@@ -49,15 +49,10 @@ void getString(char mensaje[],char input[])
 int getStringLetras(char mensaje[],char input[])
 {
     char aux[50];
-    getStringLetras("ingrese nombre",nombres[i]);
+    getString("ingrese nombre",nombres[i]);
+    esSoloLetra()
 
-    /*for(i=0;i>CANTIDAD_DATOS;i++)
-    {
-        if()
-        {
-            retorno=1;
-        }
-    }*/
+
 }
 
 int esSoloLetra(char palabra[])
