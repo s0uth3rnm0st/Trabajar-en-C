@@ -2,12 +2,7 @@
 //problema al meter un dato nuevo: mail. Por eso no usaremos vec paralelos para representar entidades
 
 //por eso usamos ---> estructuras
-/******************************************************************************************************/
 
-
-#include <stdio.h>
-#include <stdlib.h>
-#define CANTIDAD_DATOS 4
 /*
 void getString(char mensaje[],char input[]);
 int main()
@@ -20,10 +15,40 @@ int main()
 
 
 }*/
+/******************************************************************************************************/
 
+
+#include <stdio.h>
+#include <stdlib.h>
+#define CANTIDAD_DATOS 4
+
+typedef struct eAlumno
+{
+    char nombre[50];
+    char apellido[50];
+    int edad;
+    int nota;
+}eAlumno;
 
 
 int main()
 {
+    eAlumno unAlumno={"Pepe","Perezoso",22,8};
+    printf("Nombre\t\t-\t%s\n",unAlumno.nombre);
+    printf("Apellido\t-\t%s\n",unAlumno.apellido);
+    printf("Edad\t\t-\t%d\n",unAlumno.edad);
+    printf("Nota\t\t-\t%d\n",unAlumno.nota);
+
     return 0;
 }
+
+/*
+ejercicio
+
+hacer funcion que permita modificar dato del alumno, como la nota,
+buscando al alumno (agregar legajo)
+
+se puede empezar el tp2
+
+
+*/
