@@ -12,3 +12,16 @@
 	<stdlib.h>
 	"producto.h"
 
+1556221143 source:c:\programacion\trabajar-en-c\clases\clase 9c\main.c
+	<stdio.h>
+	<stdlib.h>
+	"producto.h"
+
+1556221237 c:\programacion\trabajar-en-c\clases\clase 9c\producto.h
+
+1556221453 source:c:\programacion\trabajar-en-c\clases\clase 9c\producto.c
+	<stdio.h>
+	<stdlib.h>
+	"producto.h"
+	<string.h>
+

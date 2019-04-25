@@ -20,7 +20,8 @@ typedef struct
 #endif // PRODUCTO_H_INCLUDED
 
 eProducto pedirProducto();
+void construirArray(int tam, eProducto listado[]);
 void mostrarProducto(eProducto);
-void cargarArray(eProducto[], int tamanio);
-void mostrarArray(eProducto listado[], int tamanio);
-void construirArray(eProducto[], int tamanio);
+void cargarArray(int tam, eProducto listado[]);
+void mostrarArray(int tam, eProducto listado[]);
+

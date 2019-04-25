@@ -9,7 +9,10 @@ int main()
     unProducto=pedirProducto(); //unProducto es igual al retorno de la func pedirProducto
     mostrarProducto(unProducto);
 
-    cargarArray();
+    eProducto listadoDeProductos[3];
+
+
+    cargarArray(3, listadoDeProductos);
 
     //construirArray();
 

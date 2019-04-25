@@ -39,37 +39,38 @@ void mostrarProducto(eProducto elParametroProducto) /** no seria lo correcto pon
     printf("\n%s",elParametroProducto.proveedor);
 }
 
-void cargarArray(eProducto listado[], int tamanio)
+void cargarArray(int tam, eProducto listado[])
 {
     int i;
-    for(i=0; i<tamanio; i++)
+    for(i=0; i<tam; i++)
     {
         listado[i]=pedirProducto();
     }
 }
 
-void mostrarArray(eProducto listado[], int tamanio)
+void mostrarArray(int tam, eProducto listado[])
 {
     int i;
-    for(i=0; i<tamanio;i++)
+    for(i=0; i<tam;i++)
     {
         mostrarProducto(listado[i]);
     }
 }
 
-/*
-void construirArray(eProducto listado[], int tamanio)
+
+void construirArray(int tam, eProducto listado[])
 {
     int i;
-    for(i=0; i<tamanio; i++)
+    for(i=0; i<tam; i++)
     {
-        listado[i].estado=0;
+        strcpy(listado[i].estado,0);
         strcpy(listado[i].nombre,"nn");
         strcpy(listado[i].codigoDeBarra,"");
         strcpy(listado[i].fechaVencimiento,"");
+        strcpy(listado[i].proveedor," ");
         listado[i].precio=0;
     }
 }
-*/
+
 
 
