@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1556204764 source:d:\aaaa\trabajar-en-c\clases\clase 9c\producto.c
+	<stdio.h>
+	<stdlib.h>
+	"producto.h"
+	<string.h>
+
+1556202633 d:\aaaa\trabajar-en-c\clases\clase 9c\producto.h
+
+1556204723 source:d:\aaaa\trabajar-en-c\clases\clase 9c\main.c
+	<stdio.h>
+	<stdlib.h>
+	"producto.h"
+
