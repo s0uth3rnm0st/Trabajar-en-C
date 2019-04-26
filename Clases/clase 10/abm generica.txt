@@ -1,0 +1,5 @@
+https://github.com/german2017/AMB-EstructuraGenerica
+
+REPLACE
+
+eGen_  --->  eProducto_

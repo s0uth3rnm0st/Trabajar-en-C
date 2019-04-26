@@ -103,3 +103,29 @@ int insertarProducto(eProducto listado[], int tam)
     return indice;
 }
 
+int editarProducto(eProducto listado[], int tam)
+{
+    int i;
+    char codigo[50];
+    int loEncontro=0;
+
+    printf("ingrese codigo de barras: ");
+    fflush(stdin);
+    gets(codigo);
+
+    for(i=0;i<tam;i++)
+    {
+        if(strcmp(listado[i].codigoDeBarra, codigo)==0)
+        {
+            printf("ingrese el nuevo precio: ");
+            scanf("%f", &listado[i].precio);
+            loEncontro=1
+            break;
+        }
+    }
+    if(loEncontro==0)
+    {
+        printf("codigo inexistente!\n");
+    }
+}
+

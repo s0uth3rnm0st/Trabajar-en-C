@@ -29,3 +29,4 @@ void cargarArray(int tam, eProducto listado[]); //cargar producto
 void mostrarArray(int tam, eProducto listado[]);
 int dameLugarLibre(eProducto listado[], int tam);
 int insertarProducto(eProducto listado[], int tam);
+int editarProducto(eProducto listado[], int tam);
