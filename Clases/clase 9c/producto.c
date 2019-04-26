@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "producto.h"
 #include <string.h>
+#define LIBRE 0
+#define OCUPADO 1
 
 eProducto pedirProducto() /**no seria lo correcto poner tantos bloques **/
 {
@@ -32,11 +34,7 @@ eProducto pedirProducto() /**no seria lo correcto poner tantos bloques **/
 
 void mostrarProducto(eProducto elParametroProducto) /** no seria lo correcto poner tantos printf**/
 {
-    printf("\n%s",elParametroProducto.codigoDeBarra);
-    printf("\n%s",elParametroProducto.nombre);
-    printf("\n%f",elParametroProducto.precio);
-    printf("\n%s",elParametroProducto.fechaVencimiento);
-    printf("\n%s",elParametroProducto.proveedor);
+    printf("%5s - %5s - %5f - %5s - %5s\n", elParametroProducto.codigoDeBarra, elParametroProducto.nombre, elParametroProducto.precio, elParametroProducto.fechaVencimiento, elParametroProducto.proveedor);
 }
 
 void cargarArray(int tam, eProducto listado[])
@@ -63,7 +61,7 @@ void construirArray(int tam, eProducto listado[])
     int i;
     for(i=0; i<tam; i++)
     {
-        strcpy(listado[i].estado,0);
+        listado[i].estado=0;
         strcpy(listado[i].nombre,"nn");
         strcpy(listado[i].codigoDeBarra,"");
         strcpy(listado[i].fechaVencimiento,"");
@@ -72,5 +70,36 @@ void construirArray(int tam, eProducto listado[])
     }
 }
 
+int dameLugarLibre(eProducto listado[], int tam)
+{
+    int i;
+    int index=-1; //valor ilogico, que no este en el vec
 
+    for(i=0; i<tam; i++)
+    {
+        if(listado[i].estado==LIBRE)
+        {
+            index=i;
+            break; //ya encontre, rompo
+        }
+    }
+return index;
+}
+
+void inicializarArray(eProducto listaProductos[] ,int tam)
+{
+
+
+}
+
+int insertarProducto(eProducto listado[], int tam)
+{
+    int indice;
+    indice=dameLugarLibre(listado, tam);
+    if(indice=-1)
+    {
+        listado[indice]=pedirProducto();
+    }
+    return indice;
+}
 
