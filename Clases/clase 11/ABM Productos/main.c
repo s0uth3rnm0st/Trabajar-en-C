@@ -10,16 +10,13 @@ int main()
     //cargar array.
     //mostrar array.
 
-    int opcion;
 
-
-
-    eProveedor unProveedor;
-    eProveedor listadoProveedores[T];
-    construirArrayProveedor(listadoProveedores, T);
-    inicializarProductos(listadoProveedores, T);
-    mostrarArray(listadoProveedores, T);
-
+    /*eProducto producto[10];
+    eProvedor proveedor[10];
+    inicializarProductos(producto);
+    inicializarProveedores(proveedor);
+    mostrarTodo(proveedor,producto);
+*/
 /*
     eProducto unProducto;
     eProducto listadoProductos[T];

@@ -215,7 +215,7 @@ void inicializarProveedores(eProveedor listaProvedores[],int tam)
     int id[ELEMENTO]={1, 2, 3};
     char descripcion[ELEMENTO][50]={"Petrolera", "Petrolera", "Petrolera"};
     char localidad[ELEMENTO][50]={"Avellaneda", "Bahia Blanca", "Rio Negro"};
-    char cuit[ELEMENTO]={444,555,666};
+    int cuit[ELEMENTO]={444,555,666};
     char duenio[ELEMENTO][50]={"YPF", "Axion","Shell"};
 
     int i;
@@ -223,48 +223,11 @@ void inicializarProveedores(eProveedor listaProvedores[],int tam)
     for(i=0;i<3;i++)
     {
         listaProvedores[i].id=id[i];
+        listaProvedores[i].cuit=cuit[i];
         strcpy(listaProvedores[i].descripcion,descripcion[i]);
         strcpy(listaProvedores[i].localidad,localidad[i]);
-        strcpy(listaProvedores[i].cuit,cuit[i]);
+        //strcpy(listaProvedores[i].cuit,cuit[i]);
         strcpy(listaProvedores[i].duenio,duenio[i]);
-
-        /*strcpy(listaProductos[i].codigoDeBarra,codigoDeBarra[i]);
-        strcpy(listaProductos[i].nombre,nombre[i]);
-        strcpy(listaProductos[i].proveedor, proveedor[i]);
-        strcpy(listaProductos[i].fechaDeVencimiento, fechaDeVencimiento[i]);
-        listaProductos[i].precio=precio[i];
-        listaProductos[i].estado = OCUPADO;*/
-    }
-}
-
-void construirArrayProveedor(eProveedor listado[], int cant)
-{
-    int i;
-    for(i=0; i<cant; i++)
-    {
-        //listado[i].estado= LIBRE;
-        listado[i].id= 0;
-        strcpy(listado[i].descripcion, "");
-        strcpy(listado[i].localidad, "");
-        listado[i].cuit= 0;
-        strcpy(listado[i].duenio, "");
-    }
-}
-
-void mostrarProveedor(eProveedor unProveedor)
-{
-    printf("%15s %15s %10s %10s %10f %5d\n", unProveedor.id, unProveedor.descripcion, unProveedor.localidad, unProveedor.cuit, unProveedor.duenio);
-}
-
-void mostrarArray(eProveedor listado[], int cant)
-{
-    int i;
-    for(i=0; i<cant; i++)
-    {
-        //if(listado[i].estado==OCUPADO)
-        //{
-            mostrarProveedor(listado[i]);
-        //}
     }
 }
 
@@ -279,21 +242,41 @@ void inicializarProductos(eProducto listaProductos[],int tam)
 
     int i;
 
-    for(i=0;i<3;i++)
+    for(i=0;i<10;i++)
     {
         listaProductos[i].precio=precio[i];
         strcpy(listaProductos[i].nombre,nombre[i]);
-        strcpy(listaProductos[i].idProveedor,idProveedor[i]);
+        //strcpy(listaProductos[i].idProveedor,idProveedor[i]);
         strcpy(listaProductos[i].codigoDeBarra,codigoDeBarra[i]);
         strcpy(listaProductos[i].fechaDeVencimiento,fechaDeVencimiento[i]);
-
-        /*strcpy(listaProductos[i].codigoDeBarra,codigoDeBarra[i]);
-        strcpy(listaProductos[i].nombre,nombre[i]);
-        strcpy(listaProductos[i].proveedor, proveedor[i]);
-        strcpy(listaProductos[i].fechaDeVencimiento, fechaDeVencimiento[i]);
-        listaProductos[i].precio=precio[i];
-        listaProductos[i].estado = OCUPADO;*/
+        listaProductos[i].estado = OCUPADO;
     }
 }
+
+void mostrarTodo(eProducto listaProducto[], int tamProd, eProveedor listaProveedor[], int tamProv)
+{
+    int i;
+    int j;
+    for(i=0; i<tamProd; i++)
+    {
+        mostrarProducto(listaProducto[i]);
+        for(j=0; j<tamProv; j++)
+        {
+            if(listaProducto[i].idProveedor==listaProveedor[j].id)
+                mostrarProveedor(listaProveedor[j]);
+        }
+    }
+}
+
+void mostrarProducto(eProducto unProducto)
+{
+    printf("%f %s %s %s %s\n", unProducto.precio, unProducto.nombre, unProducto.idProveedor, unProducto.codigoDeBarra, unProducto.fechaDeVencimiento);
+}
+
+void mostrarProveedor(eProveedor unProveedor)
+{
+    printf("%i %s %s %i %s\n", unProveedor.id, unProveedor.descripcion, unProveedor.localidad, unProveedor.cuit, unProveedor.duenio);
+}
+
 
 

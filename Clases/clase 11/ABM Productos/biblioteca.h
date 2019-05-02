@@ -13,7 +13,8 @@ typedef struct
     char idProveedor[50];
     //char proveedor[50];
     char codigoDeBarra[50];
-    char fechaDeVencimiento[50];//
+    char fechaDeVencimiento[50];
+    int estado;//
 }eProducto;
 
 typedef struct
@@ -49,8 +50,9 @@ int borrarProducto(eProducto[], int);
 int editarProducto(eProducto [], int );
 **/
 
-void inicializarProveedores(eProveedor listaPrrovedores[],int tam);
-void construirArrayProveedor(eProveedor listado[], int cant);
-void mostrarArray(eProveedor listado[], int cant);
-
+void inicializarProveedores(eProveedor listaProvedores[],int tam);
 void inicializarProductos(eProducto listaProductos[],int tam);
+
+void mostrarTodo(eProducto listaProducto[], int tamProd, eProveedor listaProveedor[], int tamProv);
+void mostrarProducto(eProducto unProducto);
+void mostrarProveedor(eProveedor unProveedor);
