@@ -12,8 +12,8 @@ int main()
 
     eProducto producto[10];
     eProveedor proveedor[10];
-    inicializarProductos(producto);
-    inicializarProveedores(proveedor);
+    inicializarProductos(producto, 3);
+    inicializarProveedores(proveedor, 3);
     mostrarTodo( producto,  10 ,  proveedor, 3);
 
     /*eProducto producto[10];

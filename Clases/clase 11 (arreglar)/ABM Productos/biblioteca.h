@@ -50,8 +50,8 @@ int borrarProducto(eProducto[], int);
 int editarProducto(eProducto [], int );
 **/
 
-void inicializarProveedores(eProveedor listaProvedores[]);
-void inicializarProductos(eProducto listaProductos[]);
+void inicializarProveedores(eProveedor listaProvedores[], int tam);
+void inicializarProductos(eProducto listaProductos[], int tam);
 
 void mostrarTodo(eProducto listaProducto[], int tamProd, eProveedor listaProveedor[], int tamProv);
 void mostrarProducto(eProducto unProducto);
