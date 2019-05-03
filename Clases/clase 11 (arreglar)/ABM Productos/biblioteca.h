@@ -10,7 +10,7 @@ typedef struct
 {
     float precio;
     char nombre[50];
-    int idProveedor[10];
+    int idProveedor;
     //char proveedor[50];
     char codigoDeBarra[50];
     char fechaDeVencimiento[50];

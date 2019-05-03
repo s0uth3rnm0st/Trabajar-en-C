@@ -259,7 +259,7 @@ void mostrarTodo(eProducto listaProducto[], int tamProd, eProveedor listaProveed
 {
     int i;
     int j;
-    printf("PRECIO              NOMBRE            ID              CODIGO     VENCIMIENTO\n\n");
+    printf("PRECIO NOMBRE ID CODIGO VENCIMIENTO\n\n");
     for(i=0; i<tamProd; i++)
     {
         mostrarProducto(listaProducto[i]);
