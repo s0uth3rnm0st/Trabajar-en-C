@@ -259,7 +259,6 @@ void mostrarTodo(eProducto listaProducto[], int tamProd, eProveedor listaProveed
 {
     int i;
     int j;
-    printf("PRECIO NOMBRE ID CODIGO VENCIMIENTO\n\n");
     for(i=0; i<tamProd; i++)
     {
         mostrarProducto(listaProducto[i]);
@@ -273,10 +272,10 @@ void mostrarTodo(eProducto listaProducto[], int tamProd, eProveedor listaProveed
 
 void mostrarProducto(eProducto unProducto)
 {
-    printf("%f %15s %15d %15s %15s\n", unProducto.precio, unProducto.nombre, unProducto.idProveedor, unProducto.codigoDeBarra, unProducto.fechaDeVencimiento);
+    printf("%f %15s \tID:%d\t\t codigo:%13s %15s\n", unProducto.precio, unProducto.nombre, unProducto.idProveedor, unProducto.codigoDeBarra, unProducto.fechaDeVencimiento);
 }
 
 void mostrarProveedor(eProveedor unProveedor)
 {
-    printf("%d %15s %15s %15d %15s\n", unProveedor.id, unProveedor.descripcion, unProveedor.localidad, unProveedor.cuit, unProveedor.duenio);
+    printf("ID:%d\t  %15s %15s\t cuit:%15d %15s\n\n\n", unProveedor.id, unProveedor.descripcion, unProveedor.localidad, unProveedor.cuit, unProveedor.duenio);
 }

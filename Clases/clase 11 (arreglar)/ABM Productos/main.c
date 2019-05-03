@@ -16,47 +16,11 @@ int main()
     inicializarProveedores(proveedor, 3);
     mostrarTodo( producto,  10 ,  proveedor, 3);
 
-    /*eProducto producto[10];
-    eProvedor proveedor[10];
-    inicializarProductos(producto);
-    inicializarProveedores(proveedor);
-    mostrarTodo(proveedor,producto);
+/*  1. todos los productos con su proveedor
+    2. por cada proveedor sus productos
+    3. por cada proveedor la cantidad de productos
+    4. el precio promedio de los productos de cada proveedor
+    5. el/los proveedores que provee mas productos (maximo)
 */
-/*
-    eProducto unProducto;
-    eProducto listadoProductos[T];
-    construirArray(listadoProductos,T);
-    inicializarProductos(listadoProductos,T);
-    mostrarArray(listadoProductos,T);
-
-    do
-    {
-        printf("1.ALTA\n2.BAJA\n3.MODIFICAR\n4.Mostrar\nElija opcion: ");
-        scanf("%d", &opcion);
-
-        switch(opcion)
-        {
-            case 1:
-               insertarProducto(listadoProductos, T);
-            break;
-            case 2:
-                borrarProducto(listadoProductos,T);
-                break;
-            case 3:
-                editarProducto(listadoProductos, T);
-                break;
-
-            case 4:
-                mostrarArray(listadoProductos,T);
-                break;
-        }
-    }while(opcion!=10);
-
-*/
-
-
-
-
-
     return 0;
 }
