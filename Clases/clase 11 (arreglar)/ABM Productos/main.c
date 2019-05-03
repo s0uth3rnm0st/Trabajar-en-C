@@ -10,9 +10,11 @@ int main()
     //cargar array.
     //mostrar array.
 
-    eProducto producto;
-    eProveedor proveedor;
-    mostrarTodo(producto, 10, proveedor, 3);
+    eProducto producto[10];
+    eProveedor proveedor[10];
+    inicializarProductos(producto);
+    inicializarProveedores(proveedor);
+    mostrarTodo( producto,  10 ,  proveedor, 3);
 
     /*eProducto producto[10];
     eProvedor proveedor[10];

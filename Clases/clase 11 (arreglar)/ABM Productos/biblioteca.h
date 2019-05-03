@@ -10,7 +10,7 @@ typedef struct
 {
     float precio;
     char nombre[50];
-    char idProveedor[50];
+    int idProveedor[10];
     //char proveedor[50];
     char codigoDeBarra[50];
     char fechaDeVencimiento[50];
@@ -50,8 +50,8 @@ int borrarProducto(eProducto[], int);
 int editarProducto(eProducto [], int );
 **/
 
-void inicializarProveedores(eProveedor listaProvedores[],int tam);
-void inicializarProductos(eProducto listaProductos[],int tam);
+void inicializarProveedores(eProveedor listaProvedores[]);
+void inicializarProductos(eProducto listaProductos[]);
 
 void mostrarTodo(eProducto listaProducto[], int tamProd, eProveedor listaProveedor[], int tamProv);
 void mostrarProducto(eProducto unProducto);
