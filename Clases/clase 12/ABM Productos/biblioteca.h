@@ -27,7 +27,7 @@ typedef struct
 }eProveedor;
 
 /*
-eProducto pedirProducto();
+
 
 void inicializarProductos(eProducto[],int);//OK
 
@@ -39,7 +39,7 @@ void mostrarArray(eProducto[], int);
 
 void construirArray(eProducto[], int);
 
-int insertarProducto(eProducto [], int );
+
 
 int dameLugarLibre(eProducto[],int);
 
@@ -49,6 +49,10 @@ int borrarProducto(eProducto[], int);
 
 int editarProducto(eProducto [], int );
 **/
+
+int insertarProducto(eProducto [], int );
+eProducto pedirProducto();
+int dameLugarLibre(eProducto[],int);
 
 void inicializarProveedores(eProveedor listaProvedores[], int tam);
 void inicializarProductos(eProducto listaProductos[], int tam);

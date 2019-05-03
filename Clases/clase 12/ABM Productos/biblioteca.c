@@ -279,3 +279,54 @@ void mostrarProveedor(eProveedor unProveedor)
 {
     printf("ID:%d\t  %15s %15s\t cuit:%15d %15s\n\n\n", unProveedor.id, unProveedor.descripcion, unProveedor.localidad, unProveedor.cuit, unProveedor.duenio);
 }
+
+int insertarProducto(eProducto listado[], int tam)
+{
+    int indice;
+    indice= dameLugarLibre(listado, tam);
+    if(indice != -1)
+    {
+        listado[indice]= pedirProducto();
+    }
+    return indice;
+}
+
+int dameLugarLibre(eProducto listado[], int tam)
+{
+    int i;
+    int index = -1;
+
+    for(i=0; i<tam; i++)
+    {
+        if(listado[i].estado==LIBRE)
+        {
+            index = i;
+            break;
+        }
+    }
+    return index;
+}
+
+eProducto pedirProducto()
+{
+    eProducto productoParaRetornar;
+
+    printf("Ingrese nombre: ");
+    fflush(stdin);
+    gets(productoParaRetornar.nombre);
+
+    printf("Ingrese codigo de barra: ");
+    fflush(stdin);
+    gets(productoParaRetornar.codigoDeBarra);
+
+    printf("Ingrese fecha de vencimiento: ");
+    fflush(stdin);
+    gets(productoParaRetornar.fechaDeVencimiento);
+
+    printf("Ingrese precio: ");
+    scanf("%f", &productoParaRetornar.precio);
+
+    productoParaRetornar.estado = OCUPADO;
+
+    return productoParaRetornar;
+}

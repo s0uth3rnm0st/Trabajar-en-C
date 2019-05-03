@@ -15,6 +15,7 @@ int main()
     inicializarProductos(producto, 3);
     inicializarProveedores(proveedor, 3);
     mostrarTodo( producto,  10 ,  proveedor, 3);
+    insertarProducto(producto, 10); /** no funciona **/
 
 /*  1. todos los productos con su proveedor
     2. por cada proveedor sus productos

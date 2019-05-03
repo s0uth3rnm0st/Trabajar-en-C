@@ -67,3 +67,20 @@
 	<string.h>
 	"biblioteca.h"
 
+1556895442 source:d:\aaaaaaaaa\trabajar-en-c\clases\clase 12\abm productos\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"biblioteca.h"
+
+1556895398 d:\aaaaaaaaa\trabajar-en-c\clases\clase 12\abm productos\biblioteca.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1556895411 source:d:\aaaaaaaaa\trabajar-en-c\clases\clase 12\abm productos\biblioteca.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"biblioteca.h"
+
