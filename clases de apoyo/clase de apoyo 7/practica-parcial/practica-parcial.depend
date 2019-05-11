@@ -1,0 +1,47 @@
+# depslib dependency file v1.0
+1557587847 source:d:\aaaaa\trabajar-en-c\clases de apoyo\clase de apoyo 7\practica-parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"alumno.h"
+	"localidad.h"
+	"biblioteca.h"
+
+1557587779 source:d:\aaaaa\trabajar-en-c\clases de apoyo\clase de apoyo 7\practica-parcial\alumno.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"alumno.h"
+	"biblioteca.h"
+	"localidad.h"
+
+1557587693 d:\aaaaa\trabajar-en-c\clases de apoyo\clase de apoyo 7\practica-parcial\alumno.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1557584981 d:\aaaaa\trabajar-en-c\clases de apoyo\clase de apoyo 7\practica-parcial\localidad.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1557578817 d:\aaaaa\trabajar-en-c\clases de apoyo\clase de apoyo 7\practica-parcial\biblioteca.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1557582444 source:d:\aaaaa\trabajar-en-c\clases de apoyo\clase de apoyo 7\practica-parcial\biblioteca.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"localidad.h"
+	"alumno.h"
+	"biblioteca.h"
+
+1557588686 source:d:\aaaaa\trabajar-en-c\clases de apoyo\clase de apoyo 7\practica-parcial\localidad.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"alumno.h"
+	"localidad.h"
+	"biblioteca.h"
+
