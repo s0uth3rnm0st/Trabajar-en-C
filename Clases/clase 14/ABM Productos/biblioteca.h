@@ -24,6 +24,7 @@ typedef struct
     char localidad[50];
     int cuit;
     char duenio[50];
+    int estado;
 }eProveedor;
 
 /*

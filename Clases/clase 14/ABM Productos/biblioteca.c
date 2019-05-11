@@ -370,7 +370,8 @@ void mostrarProveedorConSusProductos(eProveedor proveedorListado[], eProducto pr
     int i;
     int j;
 
-    if(proveedorListado[i].) //tiene que tener un estado
+    if(proveedorListado[i].estado==OCUPADO) //tiene que tener un estado
+
     {
         printf("%5d %s\n",proveedorListado[i].id,proveedorListado[i].duenio);
         for(j=0;j<tamProducto;j++)

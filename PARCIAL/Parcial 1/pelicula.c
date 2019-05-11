@@ -3,6 +3,7 @@
 #include <string.h>
 #define MIN 1
 #define MAX 1000000
+#define MAXPELICULAS 3
 
 #include "pelicula.h"
 #include "actor.h"
@@ -22,7 +23,7 @@ ePelicula getPelicula()
         printf("ERROR, ingrese un dato valido\n");
     }
 
-    while(getString("Ingrese el genero \nA, para accion.\nC, para comedia.\nT, para terror.\nO, para otros.\n ",peliculaRetorno.fechaEstreno)==0)
+    while(getString("Ingrese el genero \nA, para accion.\nC, para comedia.\nT, para terror.\nO, para otros.\n ",peliculaRetorno.genero)==0)
     {
         printf("ERROR, ingrese un dato valido\n");
     }
@@ -85,9 +86,9 @@ int addPelicula(ePelicula listing[], int len)
 
 void initPelicula(ePelicula listing[],int len)
 {
-    char titulo[3][50]={"Pelicula 1","Pelicula 2","Pelicula 3"};
-    char fechaEstreno[3][50]={"01/01/01","02/02/02","03/03/03"};
-    char genero[3][50]={"ACCION","COMEDIA","TERROR"};
+    char titulo[MAXPELICULAS][50]={"Pelicula 1","Pelicula 2","Pelicula 3"};
+    char fechaEstreno[MAXPELICULAS][50]={"01/01/01","02/02/02","03/03/03"};
+    char genero[MAXPELICULAS][50]={"ACCION","COMEDIA","TERROR"};
 
 
     int i;
@@ -96,8 +97,9 @@ void initPelicula(ePelicula listing[],int len)
         listing[i].id =  i + 1000;
     }
 
-    int codigoPelicula[3]={111,222,333};
-    int idActor[3]={1,2,3};
+    int codigoPelicula[MAXPELICULAS]={111,222,333};
+    int idActor[MAXPELICULAS]={1,2,3};
+
 
 
     for(i=0;i<3;i++)
@@ -106,7 +108,7 @@ void initPelicula(ePelicula listing[],int len)
         strcpy(listing[i].fechaEstreno, fechaEstreno[i]);
         strcpy(listing[i].genero, genero[i]);
         listing[i].codigoPelicula= codigoPelicula[i];
-        listing[i].idActor = idActor;
+        listing[i].idActor = idActor[i]; /*** matchear correctamente y arreglar autincremental de actor*/
         listing[i].isEmpty = OCUPADO;
 
     }
@@ -129,7 +131,7 @@ int existePelicula(ePelicula listing[],int len)
 
 void printPelicula(ePelicula laPelicula)
 {
-    printf("%s %15s %15s %15d %15d %15d \n",laPelicula.titulo, laPelicula.fechaEstreno, laPelicula.genero, laPelicula.codigoPelicula, laPelicula.id, laPelicula.idActor);
+    printf("%s %5s %5s %5d %5d %5d \n",laPelicula.titulo, laPelicula.fechaEstreno, laPelicula.genero, laPelicula.codigoPelicula, laPelicula.id, laPelicula.idActor);
 }
 
 int mostrarArrayPelicula(ePelicula listing[], int len)

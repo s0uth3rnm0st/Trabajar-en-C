@@ -9,11 +9,17 @@
 
 void initActor(eActor listing[],int len)
 {
-    int id[ACTORESMAX]={1,2,3,4,5};
-    char nombreCompleto[ACTORESMAX][50]={"Julieta Roberto","Roberto Deniro","Richar Darin", "Tita Merelo", "Sandro"};
-    char paisOrigen[ACTORESMAX][50]={"EEUU","EEUU","Argentina","Argentina","Argentina"};
+    //int id[ACTORESMAX]={1,2,3,4,5};
+    char nombreCompleto[ACTORESMAX][50]={"Julieta Roberto","Richar Darin",  "Nicole Kidman","Tita Merelo", "Natalia Oreiro"};
+    char paisOrigen[ACTORESMAX][50]={"EEUU","Argentina","Australia","Uruguay"};
 
     int i;
+    int id;
+    for(i = 0 ; i < len ; i++)
+    {
+        id=0;
+        listing[i].id =  id ++;
+    }
 
     for(i=0;i<ACTORESMAX;i++)
     {

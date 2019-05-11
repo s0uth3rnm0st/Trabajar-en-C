@@ -24,7 +24,10 @@ int main()
     4. el precio promedio de los productos de cada proveedor
     5. el/los proveedores que provee mas productos (maximo)
 */
-    mostrarProveedorConSusProductos(proveedor, producto,TPROVEEDORES,TPRODUCTOS);
+    //mostrarProveedorConSusProductos(proveedor, producto,TPROVEEDORES,TPRODUCTOS);
+    /**no funciona*/
+
+    mostrarProductoConProveedor(producto, proveedor, TPRODUCTOS, TPROVEEDORES);
     return 0;
 }
 

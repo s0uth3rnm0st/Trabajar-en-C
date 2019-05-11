@@ -10,7 +10,7 @@ typedef struct
     int codigoPelicula;
     char titulo[50];
     char fechaEstreno[8];
-    char genero[50];
+    char genero[50];    /**<----   NECESITA UNA ESTRUCTURA */
     int idActor;
     int isEmpty;
 

@@ -45,3 +45,49 @@
 	"actor.h"
 	"biblioteca.h"
 
+1557577812 source:d:\aaaaa\trabajar-en-c\parcial\parcial 1\actor.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"pelicula.h"
+	"actor.h"
+	"biblioteca.h"
+
+1557576864 d:\aaaaa\trabajar-en-c\parcial\parcial 1\pelicula.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1557496843 d:\aaaaa\trabajar-en-c\parcial\parcial 1\actor.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1557578787 d:\aaaaa\trabajar-en-c\parcial\parcial 1\biblioteca.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1557496843 source:d:\aaaaa\trabajar-en-c\parcial\parcial 1\biblioteca.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"pelicula.h"
+	"actor.h"
+	"biblioteca.h"
+
+1557496843 source:d:\aaaaa\trabajar-en-c\parcial\parcial 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"pelicula.h"
+	"actor.h"
+	"biblioteca.h"
+
+1557577492 source:d:\aaaaa\trabajar-en-c\parcial\parcial 1\pelicula.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"pelicula.h"
+	"actor.h"
+	"biblioteca.h"
+
