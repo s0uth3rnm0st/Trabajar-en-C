@@ -24,3 +24,5 @@ void printActor(eActor Actor);
 int mostrarArrayActor(eActor listing[], int len);
 
 void construirArrayActor(eActor listing[], int len);
+
+void sortActor(eActor listing[], int len);

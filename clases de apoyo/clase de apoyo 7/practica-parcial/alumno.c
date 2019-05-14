@@ -17,7 +17,6 @@ eAlumno getAlumno()
         printf("ERROR, ingrese un dato valido\n");
     }
 
-
     while(getInt("Ingrese el ID de la localidad del alumno :",alumnoRetorno.idLocalidad)==0)
     {
         printf("ERROR, ingrese un dato valido\n");
@@ -28,7 +27,7 @@ eAlumno getAlumno()
         printf("ERROR, ingrese un dato valido\n");
     }
 
-    alumnoRetorno.isEmpty==OCUPADO;
+    alumnoRetorno.isEmpty=OCUPADO;
 
     return alumnoRetorno;
 

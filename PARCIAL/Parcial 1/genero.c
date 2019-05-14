@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define ACTORESMAX 5
-#include "genero.h"
+#define GENEROSMAX 4
+
 #include "pelicula.h"
 #include "actor.h"
+#include "genero.h"
 #include "biblioteca.h"
 
-void initActor(eActor listing[],int len)
+void initGenero(eGenero listing[],int len)
 {
     //int id[ACTORESMAX]={1,2,3,4,5};
-    char nombreCompleto[ACTORESMAX][50]={"Julieta Roberto","Richar Darin","Nicole Kidman","Tita Merelo", "Natalia Oreiro"};
-    char paisOrigen[ACTORESMAX][50]={"EEUU","Argentina","Australia","Argentina","Uruguay"};
+    char genero[GENEROSMAX][50]={"ACCION","TERROR","COMEDIA","OTRO"};
 
     int i;
     for(i = 0 ; i < len ; i++)
@@ -19,15 +19,14 @@ void initActor(eActor listing[],int len)
         listing[i].id = i+1 ;
     }
 
-    for(i=0;i<ACTORESMAX;i++)
+    for(i=0;i<GENEROSMAX;i++)
     {
-        strcpy(listing[i].nombreCompleto,nombreCompleto[i]);
-        strcpy(listing[i].paisOrigen, paisOrigen[i]);
+        strcpy(listing[i].genero,genero[i]);
         listing[i].isEmpty = OCUPADO;
     }
 }
 
-int existeActor(eActor listing[],int len)
+int existeGenero(eGenero listing[],int len)
 {
     int i;
     int ret=0;
@@ -42,15 +41,15 @@ int existeActor(eActor listing[],int len)
     return ret;
 }
 
-void printActor(eActor Actor)
+void printGenero(eGenero genero)
 {
-    printf("%15s %15s %10d\n",Actor.nombreCompleto, Actor.paisOrigen, Actor.id);
+    printf("%15s %15d\n",genero.genero, genero.id);
 }
 
-int mostrarArrayActor(eActor listing[], int len)
+int mostrarArrayGenero(eGenero listing[], int len)
 {
     int flag=0;
-    if(existeActor(listing,len))
+    if(existeGenero(listing,len))
     {
         int i;
         /*printf("\t#***************************************************************#\n");
@@ -65,7 +64,7 @@ int mostrarArrayActor(eActor listing[], int len)
         {
             if(listing[i].isEmpty==OCUPADO)
             {
-                printActor(listing[i]);
+                printGenero(listing[i]);
                 flag=1;
             }
         }
@@ -79,21 +78,20 @@ int mostrarArrayActor(eActor listing[], int len)
     }*/
 }
 
-void construirArrayActor(eActor listing[], int len)
+void construirArrayGenero(eGenero listing[], int len)
 {
     int i;
     for(i=0; i<len; i++)
     {
         listing[i].isEmpty= LIBRE;
-        strcpy(listing[i].nombreCompleto, "");
-        strcpy(listing[i].paisOrigen, "");
+        strcpy(listing[i].genero, "");
         listing[i].id= 0;
     }
 }
 
-void sortActor(eActor listing[], int len)
+void sortGenero(eGenero listing[], int len)
 {
-    eActor aux;
+    eGenero aux;
     //int auxEntero;
     int i,j;
 
@@ -101,7 +99,7 @@ void sortActor(eActor listing[], int len)
     {
         for(j=i+1; j<len; j++)
         {
-            if(listing[i].nombreCompleto>listing[j].nombreCompleto)
+            if(listing[i].genero>listing[j].genero)
             {
                 aux=listing[i];
                 listing[i]=listing[j];
@@ -114,7 +112,7 @@ void sortActor(eActor listing[], int len)
     {
         for(j=i+1; j<len; j++)
         {
-            if(strcmpi(listing[i].nombreCompleto,listing[j].nombreCompleto)==1)
+            if(strcmpi(listing[i].genero,listing[j].genero)==1)
             {
                 aux=listing[i];
                 listing[i]=listing[j];
@@ -123,5 +121,3 @@ void sortActor(eActor listing[], int len)
         }
     }
 }
-
-

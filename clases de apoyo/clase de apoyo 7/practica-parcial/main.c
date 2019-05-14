@@ -50,7 +50,7 @@ int main()
     printf("\n===========================================\n");
     printf("    ORDENADOS LOS ALUMNOS ALFABETICAMENTE");
     printf("\n===========================================\n");
-    sortAlumno(localidadListado,T);
+    sortAlumno(alumnoListado,T);
     mostrarArrayAlumno(alumnoListado,TALUMNOS);
 
     MaxNota(alumnoListado[TALUMNOS],alumnoListado[TALUMNOS],TALUMNOS);

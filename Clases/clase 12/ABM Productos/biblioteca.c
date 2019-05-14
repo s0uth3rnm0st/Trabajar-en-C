@@ -9,324 +9,259 @@
 
 #include "biblioteca.h"
 
-/*
+
 eProducto pedirProducto()
 {
-    eProducto productoParaRetornar;
-
-    printf("Ingrese nombre: ");
+    eProducto retorno;
+    printf("pedir nombre\n");
     fflush(stdin);
-    gets(productoParaRetornar.nombre);
-
-    printf("Ingrese proveedor: ");
+    gets(retorno.nombre);
+    printf("pedir fecha de vencimiento\n");
     fflush(stdin);
-    gets(productoParaRetornar.proveedor);
-
-    printf("Ingrese codigo de barra: ");
+    gets(retorno.fechaDeVecimiento);
+    /*printf("pedir provedor\n");
     fflush(stdin);
-    gets(productoParaRetornar.codigoDeBarra);
-
-    printf("Ingrese fecha de vencimiento: ");
+    gets(retorno.provedor);*/
+    printf("pedir codigo de barra\n");
     fflush(stdin);
-    gets(productoParaRetornar.fechaDeVencimiento);
-
-    printf("Ingrese precio: ");
-    scanf("%f", &productoParaRetornar.precio);
-
-    productoParaRetornar.estado = OCUPADO;
-
-    return productoParaRetornar;
+    gets(retorno.codigoDeBarra);
+    printf("pedir precio\n");
+    fflush(stdin);
+    gets(retorno.precio);
+    retorno.estado = OCUPADO;
+    return retorno;
 }
-
-
-void mostrarProducto(eProducto unProducto)
+/*eProvedor edirprovedor()
 {
-    printf("%15s %15s %10s %10s %10f %5d\n", unProducto.nombre, unProducto.proveedor, unProducto.codigoDeBarra, unProducto.fechaDeVencimiento, unProducto.precio, unProducto.estado);
+    eProvedor retorno
+    int id;
+    char descripcion[50];
+    char localidad[50];
+    int cuit;
+    char dueno[50];
+}*/
+void mostraProducto(eProducto mostrar)
+{
+    printf("%9s\t",mostrar.nombre);
+    //printf("%8d\t",mostrar.iDproveedor);
+    printf("%9s\t",mostrar.codigoDeBarra);
+    printf("%9s\t",mostrar.fechaDeVecimiento);
+    printf("%9d\t",atoi(mostrar.precio));
+    //printf("%8d\n",mostrar.estado);
 }
-
-
-void cargarArray(eProducto listado[], int cant)
+void mostraProvedor(eProvedor mostrar)
+{
+    //printf("%8d\t",mostrar.id);
+    printf("%9s\t",mostrar.descripcion);
+    printf("%9s\t",mostrar.localidad);
+    printf("%9d\t",mostrar.cuit);
+    printf("%9s\n",mostrar.dueno);
+}
+void cargarArray(int tam ,eProducto listado[])
 {
     int i;
-    for(i=0; i<cant; i++)
+    for(i = 0 ; i < tam ; i++)
     {
-        listado[i]= pedirProducto();
+        listado[i] = pedirProducto();
+    }
+}
+void mostrarArray(int tam,eProducto listado[])
+{
+    int i;
+    for(i = 0 ; i < tam ; i++)
+    {
+        if(listado[i].estado == OCUPADO)
+        mostraProducto(listado[i]);
+    }
+}
+void mostrarArrayProvedor(int tam,eProvedor listado[])
+{
+    int i;
+    for(i = 0 ; i < tam ; i++)
+    {
+
+        mostraProvedor(listado[i]);
     }
 }
 
-
-void mostrarArray(eProducto listado[], int cant)
-{
-    int i;
-    for(i=0; i<cant; i++)
-    {
-        if(listado[i].estado==OCUPADO)
-        {
-            mostrarProducto(listado[i]);
-        }
-
-
-    }
-}
-
-
-void construirArray(eProducto listado[], int cant)
-{
-    int i;
-    for(i=0; i<cant; i++)
-    {
-        listado[i].estado= LIBRE;
-        listado[i].precio= 0;
-        strcpy(listado[i].nombre, "");
-        strcpy(listado[i].proveedor, "");
-        strcpy(listado[i].codigoDeBarra, "");
-        strcpy(listado[i].fechaDeVencimiento, "");
-    }
-}
-
-
-int insertarProducto(eProducto listado[], int tam)
+int insertProducto(int tam,eProducto listado[],eProvedor lista[])
 {
     int indice;
-    indice= dameLugarLibre(listado, tam);
-    if(indice != -1)
+    int opcion;
+    indice = dameLugarLibre(listado , tam);
+    if(indice != OCUPADO)
     {
-        listado[indice]= pedirProducto();
+        listado[indice] = pedirProducto();
+        printf("1. YPF\n2. axion\n3. shell");
+        scanf("%d",&opcion);
+        lista[opcion] = buscarprovedor();
     }
     return indice;
 }
+/*int insertProveedor(int tam,eProvedor listado[],eProducto lista[])
+{
+    int indice;
+    indice = insertProducto(tam,lista);
+    if(indice != OCUPADO)
+    {
+        listado[indice] = pedirprovedor();
+    }
+}*/
 
-
-int dameLugarLibre(eProducto listado[], int tam)
+int dameLugarLibre(eProducto listado[],int tam)
 {
     int i;
-    int index = -1;
+    int index = OCUPADO;
 
-    for(i=0; i<tam; i++)
+    for(i = 0 ; i<tam ; i++)
     {
-        if(listado[i].estado==LIBRE)
+        if(listado[i].estado == LIBRE)
         {
             index = i;
             break;
         }
+
     }
     return index;
 }
-
-
-int existeProducto(eProducto unProducto,eProducto lista[])
+int borrarProducto(int tam,eProducto listado[])
 {
-
-}
-
-
-int borrarProducto(eProducto lista[], int tam)
-{
-
-
- int i;
-   char codigo[50];
-   int loEncontro = 0;
-
-   printf("Ingrese el codigo de barras: ");
-   fflush(stdin);
-   gets(codigo);
-
-   for(i=0; i<tam; i++)
-   {
-       if(strcmp(lista[i].codigoDeBarra, codigo)==0)
-       {
-          lista[i].estado = LIBRE;
+    int i;
+    char codigo[50];
+    int loEncontro = 0;
+    printf("ingrese el cofigo de barra: ");
+    fflush(stdin);
+    gets(codigo);
+    for(i = 0; i < tam ; i++)
+    {
+        if(strcmp(listado[i].codigoDeBarra , codigo) == 0)
+        {
+            listado[i].estado = LIBRE;
             loEncontro = 1;
-           break;
-       }
+        }
 
-   }
-
-   if(loEncontro==0)
-   {
-      printf("Codigo inexistente!!");
-   }
-
-    return 0;
-}
-
-void inicializarProductos(eProducto listaProductos[],int tam)
-{
-
-    float precio[3]={50,42.95,9.52};
-    char nombre[3][50]={"Agua 2Lt","Cap. Espacio","Turron"};
-    char proveedor[3][50]={"Coca-Cola","Bagley","Arcor"};
-
-    char codigoDeBarra[3][13]={"77951234","77959876","70"};
-
-    char fechaDeVencimiento[3][50]={"22/10/2020","10/05/2019","15/12/2008"};
-
-    int i;
-
-    for(i=0;i<3;i++)
-    {
-        strcpy(listaProductos[i].codigoDeBarra,codigoDeBarra[i]);
-        strcpy(listaProductos[i].nombre,nombre[i]);
-        strcpy(listaProductos[i].proveedor, proveedor[i]);
-        strcpy(listaProductos[i].fechaDeVencimiento, fechaDeVencimiento[i]);
-        listaProductos[i].precio=precio[i];
-        listaProductos[i].estado = OCUPADO;
     }
-
-
-
+    if(loEncontro != 1)
+        {
+            printf("codigo inexistente");
+        }
 }
 
-int editarProducto(eProducto lista[], int tam)
+
+
+
+int editarProducto(int tam ,eProducto listado[])
 {
-   int i;
-   char codigo[50];
-   int loEncontro = 0;
-
-   printf("Ingrese el codigo de barras: ");
-   fflush(stdin);
-   gets(codigo);
-
-   for(i=0; i<tam; i++)
-   {
-       if(strcmp(lista[i].codigoDeBarra, codigo)==0)
-       {
-           printf("Ingrese el nuevo precio: ");
-           scanf("%f", &lista[i].precio);
+    int i;
+    char codigo[50];
+    int loEncontro = 0;
+    printf("ingrese el codigo de barra: ");
+    fflush(stdin);
+    gets(codigo);
+    for(i = 0; i < tam ; i++)
+    {
+        if(strcmp(listado[i].codigoDeBarra , codigo) == 0)
+        {
+            printf("pedir precio nuevo\n");
+            fflush(stdin);
+            gets(listado[i].precio);
             loEncontro = 1;
-           break;
-       }
+        }
 
-   }
-
-   if(loEncontro==0)
-   {
-      printf("Codigo inexistente!!");
-   }
-
-   return 0;
+    }
+    if(loEncontro != 1)
+        {
+            printf("codigo inexistente");
+        }
 }
-*/
-/****************************************/
-void inicializarProveedores(eProveedor listaProvedores[], int tam)
+void cargarEnCero(eProducto listado[] , int tam)
 {
-
-    int id[ELEMENTO]={1, 2, 3};
-    char descripcion[ELEMENTO][50]={"Petrolera", "Petrolera", "Petrolera"};
-    char localidad[ELEMENTO][50]={"Avellaneda", "Bahia Blanca", "Rio Negro"};
-    int cuit[ELEMENTO]={444,555,666};
-    char duenio[ELEMENTO][50]={"YPF", "Axion","Shell"};
-
     int i;
-
-    for(i=0;i<3;i++)
+    for(i = 0 ; i < tam ; i++)
     {
-        listaProvedores[i].id=id[i];
-        listaProvedores[i].cuit=cuit[i];
-        strcpy(listaProvedores[i].descripcion,descripcion[i]);
-        strcpy(listaProvedores[i].localidad,localidad[i]);
-        //strcpy(listaProvedores[i].cuit,cuit[i]);
-        strcpy(listaProvedores[i].duenio,duenio[i]);
+        listado[i].estado = LIBRE;
     }
 }
-
-void inicializarProductos(eProducto listaProductos[], int tam)
+void inicializarProductos(eProducto lista[])
 {
-    float precio[10]={42, 43 ,44, 40 ,41, 42, 35, 36, 37 ,38};
-    char nombre[10][50]={"infinia", "axionPower", "vPower", "infiniaDiesell", "axionDiesell", "vPowerDiesell", "super", "axionSuper", "normal", "kerosene"};
-    int idProveedor[10]={1, 2, 3, 1, 2, 3, 1, 2, 3, 1};
-    char codigoDeBarra[10][50]={"100", "101", "102", "103", "104", "105", "106", "107", "108", "109"};
-    char fechaDeVencimiento[10][50]={"1/1/2021", "2/2/2021", "3/3/2021", "4/4/2021", "5/5/2021", "6/6/2021", "7/7/2021", "8/8/2021", "9/9/2021", "10/10/2021"};
-    // nombre= infinia axionPower vPower infiniaDiesell axionDiesell vPowerDiesell super axionSuper normal kerosene
+    char codigoDeBarra[10][13] = {"123","143","232","654","545","314","132","859","564","453"} ;
+    char nombre[10][50] = {"infinia","action power","vipower","infinia disel", "action disel","zeto disel","super","acton super","normal","querosen"} ;
+    char fechaDeVecimiento[10][50] = {"1/2020","2/2020","3/2020","4/2020","10/2020","8/2020","7/2020","5/2020","6/2020","12/2020"};
+    char precio[10][50] = {"42","43","44","40","41","42","35","36","37","38"};
+    int iDproveedor[10] = {1,2,3,1,2,3,1,2,3,1};
 
     int i;
-
-    for(i=0;i<10;i++)
+    for(i = 0; i < 10 ;i++)
     {
-        listaProductos[i].precio = precio[i];
-        strcpy(listaProductos[i].nombre,nombre[i]);
-        listaProductos[i].idProveedor = idProveedor[i];
-        strcpy(listaProductos[i].codigoDeBarra,codigoDeBarra[i]);
-        strcpy(listaProductos[i].fechaDeVencimiento,fechaDeVencimiento[i]);
-        listaProductos[i].estado = OCUPADO;
+        strcpy(lista[i].codigoDeBarra , codigoDeBarra[i]);
+        strcpy(lista[i].nombre, nombre[i]);
+        lista[i].iDproveedor = iDproveedor[i];
+        strcpy(lista[i].precio , precio[i]);
+        strcpy(lista[i].fechaDeVecimiento,fechaDeVecimiento[i]);
+        lista[i].estado = OCUPADO;
     }
 }
+eProvedor buscarprovedor()
+{
+        int i;
+        eProvedor lista[i];
+        int id[3] = {1 , 2 , 3};
+        char descripcion[3][50] = {"petrolera" ,"petrolera" , "petrolera"};
+        char localidad[3][50] = {"avellaneda" , "bahia blanca" , "rio negro"};
+        int cuit[3] = {4444 , 5555 , 6666} ;
+        char dueno[3][50] = { "YPF", "axion" , " shell" };
+        strcpy(lista[i].descripcion , descripcion[i]);
+        strcpy(lista[i].localidad,localidad[i]);
+        strcpy(lista[i].dueno , dueno[i]);
+        lista[i].id = id[i];
+        lista[i].cuit = cuit[i];
+        return lista[i];
 
-
-
-void mostrarTodo(eProducto listaProducto[], int tamProd, eProveedor listaProveedor[], int tamProv)
+}
+void construirArray(int tam , eProducto listado[])
+{
+    int i;
+    for(i = 0; i < tam ;i++)
+    {
+        listado[i].estado == LIBRE;
+    }
+}
+void inicializarProvedor(eProvedor lista[])
+{
+    int id[3] = {1 , 2 , 3};
+    char descripcion[3][50] = {"petrolera" ,"petrolera" , "petrolera"};
+    char localidad[3][50] = {"avellaneda" , "bahia blanca" , "rio negro"};
+    int cuit[3] = {4444 , 5555 , 6666} ;
+    char dueno[3][50] = { "YPF", "axion" , " shell" };
+    int i;
+    for(i = 0; i < 3 ;i++)
+    {
+        strcpy(lista[i].descripcion , descripcion[i]);
+        strcpy(lista[i].localidad,localidad[i]);
+        strcpy(lista[i].dueno , dueno[i]);
+        lista[i].id = id[i];
+        lista[i].cuit = cuit[i];
+    }
+}
+void mostrarTodo(eProducto listaProductos[], int tanprod, eProvedor listaProvedores[],int tanprov)
 {
     int i;
     int j;
-    for(i=0; i<tamProd; i++)
+    printf("%9s\t%9s\t%9s%9s\t%9s\t%9s\t%9s\t%9s\n","nombre","codigo de barra","fecha vecimiento","precio","descripcion","localidad","cuit","duenio");
+    for(i=0; i<tanprod;i++)
     {
-        mostrarProducto(listaProducto[i]);
-        for(j=0; j<tamProv; j++)
+        if(listaProductos[i].estado == OCUPADO)
         {
-            if(listaProducto[i].idProveedor==listaProveedor[j].id)
-            mostrarProveedor(listaProveedor[j]);
+            mostraProducto(listaProductos[i]);
+            for(j=0;j<tanprov;j++)
+            {
+                if(listaProductos[i].iDproveedor == listaProvedores[j].id)
+                        mostraProvedor(listaProvedores[j]);
+
+            }
+
         }
+
+
     }
-}
-
-void mostrarProducto(eProducto unProducto)
-{
-    printf("%f %15s \tID:%d\t\t codigo:%13s %15s\n", unProducto.precio, unProducto.nombre, unProducto.idProveedor, unProducto.codigoDeBarra, unProducto.fechaDeVencimiento);
-}
-
-void mostrarProveedor(eProveedor unProveedor)
-{
-    printf("ID:%d\t  %15s %15s\t cuit:%15d %15s\n\n\n", unProveedor.id, unProveedor.descripcion, unProveedor.localidad, unProveedor.cuit, unProveedor.duenio);
-}
-
-int insertarProducto(eProducto listado[], int tam)
-{
-    int indice;
-    indice= dameLugarLibre(listado, tam);
-    if(indice != -1)
-    {
-        listado[indice]= pedirProducto();
-    }
-    return indice;
-}
-
-int dameLugarLibre(eProducto listado[], int tam)
-{
-    int i;
-    int index = -1;
-
-    for(i=0; i<tam; i++)
-    {
-        if(listado[i].estado==LIBRE)
-        {
-            index = i;
-            break;
-        }
-    }
-    return index;
-}
-
-eProducto pedirProducto()
-{
-    eProducto productoParaRetornar;
-
-    printf("Ingrese nombre: ");
-    fflush(stdin);
-    gets(productoParaRetornar.nombre);
-
-    printf("Ingrese codigo de barra: ");
-    fflush(stdin);
-    gets(productoParaRetornar.codigoDeBarra);
-
-    printf("Ingrese fecha de vencimiento: ");
-    fflush(stdin);
-    gets(productoParaRetornar.fechaDeVencimiento);
-
-    printf("Ingrese precio: ");
-    scanf("%f", &productoParaRetornar.precio);
-
-    productoParaRetornar.estado = OCUPADO;
-
-    return productoParaRetornar;
 }

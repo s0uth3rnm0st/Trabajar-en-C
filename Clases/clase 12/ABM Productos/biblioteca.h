@@ -2,61 +2,39 @@
 #include <stdlib.h>
 #include <string.h>
 #define LIBRE 0
-#define OCUPADO 1
-#define BORRADO -1
-
-
-typedef struct
-{
-    float precio;
+#define OCUPADO -1
+typedef struct{
+    char codigoDeBarra[13];
+    char fechaDeVecimiento[50];
+    int iDproveedor;
     char nombre[50];
-    int idProveedor;
-    //char proveedor[50];
-    char codigoDeBarra[50];
-    char fechaDeVencimiento[50];
-    int estado;//
+    char precio[50];
+    int estado;
 }eProducto;
-
-typedef struct
-{
+typedef struct{
     int id;
     char descripcion[50];
     char localidad[50];
     int cuit;
-    char duenio[50];
-}eProveedor;
+    char dueno[50];
 
-/*
+}eProvedor;
 
-
-void inicializarProductos(eProducto[],int);//OK
-
-void mostrarProducto(eProducto);
-
-void cargarArray(eProducto[], int);
-
-void mostrarArray(eProducto[], int);
-
-void construirArray(eProducto[], int);
-
-
-
-int dameLugarLibre(eProducto[],int);
-
-int existeProducto(eProducto,eProducto[]);
-
-int borrarProducto(eProducto[], int);
-
-int editarProducto(eProducto [], int );
-**/
-
-int insertarProducto(eProducto [], int );
 eProducto pedirProducto();
-int dameLugarLibre(eProducto[],int);
-
-void inicializarProveedores(eProveedor listaProvedores[], int tam);
-void inicializarProductos(eProducto listaProductos[], int tam);
-
-void mostrarTodo(eProducto listaProducto[], int tamProd, eProveedor listaProveedor[], int tamProv);
-void mostrarProducto(eProducto unProducto);
-void mostrarProveedor(eProveedor unProveedor);
+void mostraProducto(eProducto);
+void cargarArray(int tam ,eProducto listado[]);
+void mostrarArray(int tam,eProducto listado[]);
+void construirArray(int tam , eProducto listado[]);
+int insertProducto(int tam,eProducto[],eProvedor lista[]);
+int dameLugarLibre(eProducto[],int tam);
+int existeProducto(eProducto,eProducto[]);
+int borrarProducto(int,eProducto[]);
+int editarProducto(int ,eProducto[]);
+void cargarEnCero(eProducto[] , int);
+void inicializarProductos(eProducto lista[]);
+void inicializarProvedor(eProvedor lista[]);
+void mostrarTodo(eProducto listaProductos[], int tamprod, eProvedor listaProvedores[],int tanprov);
+void mostraProvedor(eProvedor mostrar);
+void mostrarArrayProvedor(int tam,eProvedor listado[]);
+int insertProveedor(int tam,eProvedor listado[],eProducto lista[]);
+eProvedor buscarprovedor();
