@@ -45,7 +45,7 @@
 	"localidad.h"
 	"biblioteca.h"
 
-1557589136 source:c:\programacion\trabajar-en-c\clases de apoyo\clase de apoyo 7\practica-parcial\alumno.c
+1557964362 source:c:\programacion\trabajar-en-c\clases de apoyo\clase de apoyo 7\practica-parcial\alumno.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -53,7 +53,7 @@
 	"biblioteca.h"
 	"localidad.h"
 
-1557589136 c:\programacion\trabajar-en-c\clases de apoyo\clase de apoyo 7\practica-parcial\alumno.h
+1557964352 c:\programacion\trabajar-en-c\clases de apoyo\clase de apoyo 7\practica-parcial\alumno.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -84,7 +84,7 @@
 	"localidad.h"
 	"biblioteca.h"
 
-1557794621 source:c:\programacion\trabajar-en-c\clases de apoyo\clase de apoyo 7\practica-parcial\main.c
+1557964418 source:c:\programacion\trabajar-en-c\clases de apoyo\clase de apoyo 7\practica-parcial\main.c
 	<stdio.h>
 	<stdlib.h>
 	"alumno.h"

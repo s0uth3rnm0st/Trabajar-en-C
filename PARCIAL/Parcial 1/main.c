@@ -21,32 +21,32 @@ int main()
 
     construirArrayPelicula(peliculaListado,TPELICULA);
     initPelicula(peliculaListado,TPELICULA);
-    mostrarArrayPelicula(peliculaListado,TPELICULA);
+    //mostrarArrayPelicula(peliculaListado,TPELICULA);
 
 
     construirArrayActor(actorListado,TACTOR);
     initActor(actorListado,TACTOR);
     //sortActor(actorListado,TACTOR);
-    mostrarArrayActor(actorListado,TACTOR);
+    //mostrarArrayActor(actorListado,TACTOR);
 
     construirArrayGenero(generoListado,TGENERO);
     initGenero(generoListado,TGENERO);
     //sortGenero(generoListado,TGENERO);
-    mostrarArrayGenero(generoListado,TGENERO);
-
+    //mostrarArrayGenero(generoListado,TGENERO);
+/*
     printf("\n|======|======|============|==========|=========|=======================|");
     printf("\n|CODIGO|  ID  |   TITULO   | ESTRENO  | GENERO  |         ACTOR         |");
     printf("\n|======|======|============|==========|=========|=======================|");
     mostrarPeliculaConActor(peliculaListado,actorListado,TPELICULA,TACTOR);
     printf("\n|======|======|============|==========|=========|=======================|");
-
+*/
     while(exit==1)
     {
-        printf("\n1.ALTA\n2.BAJA\n3.MODIFICAR\n4.Mostrar\n5.SALIR\n\n");
+        printf("\n1.ALTA\n2.BAJA\n3.MODIFICAR\n4.MOSTRAR\n5.LISTAR\n6.SALIR\n\n");
         while(!pedirOpcionMenu("Ingrese el numero de la opcion: ",opcionChar))
         {
             system("cls");
-            printf("1.ALTA\n2.BAJA\n3.MODIFICAR\n4.Mostrar\n5.SALIR\n\n");
+            printf("1.ALTA\n2.BAJA\n3.MODIFICAR\n4.MOSTRAR\n5.LISTAR\n6.SALIR\n\n");
             printf("OPCION INCORRECTA!! debe ser un numero.\n");
         }
 
@@ -55,27 +55,53 @@ int main()
         switch(opcion)
         {
             case 1:
-                //addEmployee(employeeListing, T);
                 addPelicula(peliculaListado,TPELICULA);
                 break;
 
             case 2:
-                //deleteEmployee(employeeListing, T);
+                deletePelicula(peliculaListado,TPELICULA);
                 break;
 
             case 3:
-                //editEmployee(employeeListing, T);
+                editPelicula(peliculaListado, TPELICULA);
                 break;
 
             case 4:
-                /*sortEmployees(employeeListing, T);
-                mostrarArray(employeeListing, T);
-                arrayInformation(employeeListing, T);*/
+                //sortPelicula(peliculaListado, TPELICULA);
+                //arrayInformation(employeeListing, T);
 
                 mostrarArrayPelicula(peliculaListado,TPELICULA);
                 break;
 
             case 5:
+                sortAnio(peliculaListado,TPELICULA);
+                printf("\n|==============================|");
+                printf("\n| PELICULAS ORDENADAS POR ANIO |");
+                printf("\n|==============================|\n");
+                mostrarArrayPeliculaConsigna(peliculaListado,TPELICULA);
+
+                sortPaisOrigen(actorListado,TACTOR);
+                printf("\n|==============================|");
+                printf("\n|  ACTORES ORDENADOS POR PAIS  |");
+                printf("\n|==============================|\n");
+                mostrarArrayActor(actorListado,TACTOR);
+
+                printf("\n|============================================|");
+                printf("\n|  PELICULAS ORDENADAS POR NOMBRE ASCENDENTE |");
+                printf("\n|============================================|\n");
+                ordenarPeliculasPorIdYCritetrio(peliculaListado,TPELICULA,-1);
+                mostrarArrayPeliculaConsigna(peliculaListado,TPELICULA);
+
+                printf("\n|============================================|");
+                printf("\n| PELICULAS ORDENADAS POR NOMBRE DESCENDENTE |");
+                printf("\n|============================================|\n");
+                ordenarPeliculasPorIdYCritetrio(peliculaListado,TPELICULA,1);
+                mostrarArrayPeliculaConsigna(peliculaListado,TPELICULA);
+
+                MaxVistas(peliculaListado[TPELICULA],peliculaListado[TPELICULA],TPELICULA);
+                break;
+
+            case 6:
                 exit = 0;
                 break;
 

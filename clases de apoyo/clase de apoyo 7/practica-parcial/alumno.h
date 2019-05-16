@@ -35,7 +35,7 @@ void construirArrayAlumno(eAlumno listado[], int tam);
 
 void sortAlumno(eAlumno listing[], int len);
 
-int MaxNota(eAlumno maximo, eAlumno minimo,int len);
+int MaxNota(eAlumno maximo[],int len);
 
 
 

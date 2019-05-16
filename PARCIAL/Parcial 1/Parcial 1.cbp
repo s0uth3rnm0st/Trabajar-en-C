@@ -39,6 +39,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="biblioteca.h" />
+		<Unit filename="genero.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="genero.h" />
 		<Unit filename="infofiltros">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>

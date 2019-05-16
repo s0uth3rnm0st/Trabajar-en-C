@@ -11,7 +11,7 @@ void initActor(eActor listing[],int len)
 {
     //int id[ACTORESMAX]={1,2,3,4,5};
     char nombreCompleto[ACTORESMAX][50]={"Julieta Roberto","Richar Darin","Nicole Kidman","Tita Merelo", "Natalia Oreiro"};
-    char paisOrigen[ACTORESMAX][50]={"EEUU","Argentina","Australia","Argentina","Uruguay"};
+    char paisOrigen[ACTORESMAX][50]={"EEUU  ","Argentina","Australia","Argentina","Uruguay"};
 
     int i;
     for(i = 0 ; i < len ; i++)
@@ -44,7 +44,7 @@ int existeActor(eActor listing[],int len)
 
 void printActor(eActor Actor)
 {
-    printf("%15s %15s %10d\n",Actor.nombreCompleto, Actor.paisOrigen, Actor.id);
+    printf(" %s \t\t%15s, id: %d\n",Actor.paisOrigen, Actor.nombreCompleto, Actor.id);
 }
 
 int mostrarArrayActor(eActor listing[], int len)
@@ -53,11 +53,6 @@ int mostrarArrayActor(eActor listing[], int len)
     if(existeActor(listing,len))
     {
         int i;
-        /*printf("\t#***************************************************************#\n");
-        printf("\t#\t\t\t\t\t\t\t\t#\n");
-        printf("\t#APELLIDO\tNOMBRE\t\tID\tSECTOR\t\tSALARIO #\n");
-        printf("\t#\t\t\t\t\t\t\t\t#\n");
-        printf("\t#***************************************************************#\n\n");*/
 
         printf("\n");/************/
 
@@ -91,7 +86,7 @@ void construirArrayActor(eActor listing[], int len)
     }
 }
 
-void sortActor(eActor listing[], int len)
+void sortPaisOrigen(eActor listing[], int len)
 {
     eActor aux;
     //int auxEntero;
@@ -101,7 +96,7 @@ void sortActor(eActor listing[], int len)
     {
         for(j=i+1; j<len; j++)
         {
-            if(listing[i].nombreCompleto>listing[j].nombreCompleto)
+            if(listing[i].paisOrigen>listing[j].paisOrigen)
             {
                 aux=listing[i];
                 listing[i]=listing[j];
@@ -114,7 +109,7 @@ void sortActor(eActor listing[], int len)
     {
         for(j=i+1; j<len; j++)
         {
-            if(strcmpi(listing[i].nombreCompleto,listing[j].nombreCompleto)==1)
+            if(strcmpi(listing[i].paisOrigen,listing[j].paisOrigen)==1)
             {
                 aux=listing[i];
                 listing[i]=listing[j];

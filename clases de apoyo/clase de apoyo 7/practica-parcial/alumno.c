@@ -182,7 +182,7 @@ void construirArrayAlumno(eAlumno listado[], int tam)
         listado[i].nota= 0;
     }
 }
-
+/*
 void sortAlumno(eAlumno listing[], int len)
 {
     eAlumno aux;
@@ -215,24 +215,20 @@ void sortAlumno(eAlumno listing[], int len)
         }
     }
 }
-
-int MaxNota(eAlumno maximo, eAlumno minimo,int len)
+*/
+int MaxNota(eAlumno maximo[],int len)
 {
     int result;
-    int max=0;
+    eAlumno max;
     int i;
 
     for(i=0;i<len;i++)
     {
-        if (maximo.nota > max)
+        if (maximo[i].nota < max)
         {
-            max = maximo.nota;
-        }
-        else
-        {
-            max = minimo.nota;
+            max = maximo[i].nota;
         }
     }
     printf("\nLA NOTA MAS ALTA ES: %d\n",max);
-    return max;
+    return 0;
 }

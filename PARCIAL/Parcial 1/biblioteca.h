@@ -8,7 +8,7 @@ int soloNumeros(char str[]);
 
 int getStringNumero(char mensaje[],char input[]);
 
-void getStringYear1894To2025(char mensaje[],int *input[]);
+void getYear1894To2025(char mensaje[],int *input[]);
 
 int pedirOpcionMenu(char texto[],char opcion[]);
 
@@ -17,6 +17,8 @@ int getString(char mensaje[],char input[]);
 int getStringSpaces(char mensaje[],char input[]);
 
 int getInt(char mensaje[], int *input);
+
+int fullArray(ePelicula listing[],int len);
 
 
 

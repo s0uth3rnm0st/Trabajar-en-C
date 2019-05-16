@@ -11,6 +11,7 @@ typedef struct
     char titulo[50];
     int anioEstreno; /**1894 - 2025*/
     //char genero[50];    /**<----   NECESITA UNA ESTRUCTURA */
+    int vistas;
     int idActor;
     int idGenero;
     int isEmpty;
@@ -38,6 +39,16 @@ void printPelicula(ePelicula laPelicula);
 int mostrarArrayPelicula(ePelicula listing[], int len);
 
 void construirArrayPelicula(ePelicula listado[], int tam);
+
+int editPelicula(ePelicula listing[], int len);
+
+void sortPelicula(ePelicula listing[], int len);
+
+void sortAnio(ePelicula listing[], int len);
+
+int getVistas(int *input);
+
+int MaxVistas(ePelicula maximo, ePelicula minimo,int len);
 
 //void mostrarPeliculaConActor(ePelicula peliculaListado[], eActor actorListado[], int tamPelicula, int tamActor);
 //NO RECONOCE A eActor, FUNCION SIN PROTOTIPO

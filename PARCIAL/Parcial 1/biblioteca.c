@@ -41,7 +41,7 @@ int getStringNumero(char mensaje[],char input[])
 }
 
 
-void getStringYear1894To2025(char mensaje[],int *input[])
+void getYear1894To2025(char mensaje[],int *input[])
 {
     int aux;
     while(getInt("ingrese anio ",&aux)==0)
@@ -150,6 +150,21 @@ int getInt(char mensaje[], int *input)
 
     return retorno;
 }
+
+int fullArray(ePelicula listing[],int len)
+{
+    int i;
+    for(i=0;i<len;i++)
+    {
+        if(listing[i].isEmpty == OCUPADO)
+        {
+            printf("No quedan lugares libres, borre o modifique una pelicula\n");
+            break;
+        }
+    }
+    return 0;
+}
+
 
 
 
