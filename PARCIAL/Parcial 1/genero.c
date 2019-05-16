@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define GENEROSMAX 4
+#define GENEROSMAX 5
 
 #include "pelicula.h"
 #include "actor.h"
@@ -11,7 +11,7 @@
 void initGenero(eGenero listing[],int len)
 {
     //int id[ACTORESMAX]={1,2,3,4,5};
-    char genero[GENEROSMAX][50]={"ACCION","TERROR","COMEDIA","OTRO"};
+    char genero[GENEROSMAX][50]={"ACCION","TERROR","ROMANTICA","COMEDIA","OTRO"};
 
     int i;
     for(i = 0 ; i < len ; i++)

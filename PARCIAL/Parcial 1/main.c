@@ -98,7 +98,20 @@ int main()
                 ordenarPeliculasPorIdYCritetrio(peliculaListado,TPELICULA,1);
                 mostrarArrayPeliculaConsigna(peliculaListado,TPELICULA);
 
-                MaxVistas(peliculaListado[TPELICULA],peliculaListado[TPELICULA],TPELICULA);
+                printf("\n|============================================|");
+                printf("\n|        PELICULAS CON GENERO Y ACTOR        |");
+                printf("\n|============================================|\n");
+                printf(" PELICULA\t\tACTOR\t\t\tGENERO\n");
+                printf("-------------------------------------------------------\n");
+                mostrarPeliculaConGeneroYActor(peliculaListado,actorListado,generoListado,TPELICULA,TACTOR,TGENERO);
+                printf("\n\n");
+
+                printf("\n|===============================================|");
+                printf("\n|PELICULAS CUYO ACTORES PRINCIPALES SEAN DE EEUU|");
+                printf("\n|===============================================|\n");
+                mostrarPeliculaPaisActorEEUU(peliculaListado,actorListado,TPELICULA,TACTOR);
+                printf("\n\n");
+                //MaxVistas(peliculaListado,TPELICULA);
                 break;
 
             case 6:
