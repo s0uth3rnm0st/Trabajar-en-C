@@ -182,7 +182,7 @@ void construirArrayAlumno(eAlumno listado[], int tam)
         listado[i].nota= 0;
     }
 }
-/*
+
 void sortAlumno(eAlumno listing[], int len)
 {
     eAlumno aux;
@@ -215,7 +215,7 @@ void sortAlumno(eAlumno listing[], int len)
         }
     }
 }
-*/
+
 int MaxNota(eAlumno maximo[],int len)
 {
     int result;
