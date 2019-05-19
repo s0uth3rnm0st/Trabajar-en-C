@@ -100,7 +100,7 @@
 	"actor.h"
 	"biblioteca.h"
 
-1557962693 c:\programacion\trabajar-en-c\parcial\parcial 1\pelicula.h
+1558293571 c:\programacion\trabajar-en-c\parcial\parcial 1\pelicula.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -124,7 +124,7 @@
 	"actor.h"
 	"biblioteca.h"
 
-1557962622 source:c:\programacion\trabajar-en-c\parcial\parcial 1\main.c
+1558294358 source:c:\programacion\trabajar-en-c\parcial\parcial 1\main.c
 	<stdio.h>
 	<stdlib.h>
 	"genero.h"
@@ -132,16 +132,7 @@
 	"actor.h"
 	"biblioteca.h"
 
-1557962622 source:c:\programacion\trabajar-en-c\parcial\parcial 1\pelicula.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	"pelicula.h"
-	"actor.h"
-	"genero.h"
-	"biblioteca.h"
-
-1557873011 source:c:\programacion\trabajar-en-c\parcial\parcial 1\genero.c
+1558294358 source:c:\programacion\trabajar-en-c\parcial\parcial 1\pelicula.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -150,7 +141,16 @@
 	"genero.h"
 	"biblioteca.h"
 
-1557866536 c:\programacion\trabajar-en-c\parcial\parcial 1\genero.h
+1558282086 source:c:\programacion\trabajar-en-c\parcial\parcial 1\genero.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"pelicula.h"
+	"actor.h"
+	"genero.h"
+	"biblioteca.h"
+
+1558282087 c:\programacion\trabajar-en-c\parcial\parcial 1\genero.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

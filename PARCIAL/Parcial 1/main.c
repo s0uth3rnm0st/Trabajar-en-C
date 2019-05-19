@@ -17,7 +17,7 @@ int main()
 
     ePelicula peliculaListado[TPELICULA];
     eActor actorListado[TACTOR];
-    eGenero generoListado[TGENERO];
+    //eGenero generoListado[TGENERO];
 
     construirArrayPelicula(peliculaListado,TPELICULA);
     initPelicula(peliculaListado,TPELICULA);
@@ -29,8 +29,8 @@ int main()
     //sortActor(actorListado,TACTOR);
     //mostrarArrayActor(actorListado,TACTOR);
 
-    construirArrayGenero(generoListado,TGENERO);
-    initGenero(generoListado,TGENERO);
+    //construirArrayGenero(generoListado,TGENERO);
+    //initGenero(generoListado,TGENERO);
     //sortGenero(generoListado,TGENERO);
     //mostrarArrayGenero(generoListado,TGENERO);
 /*
@@ -85,7 +85,7 @@ int main()
                 printf("\n|  ACTORES ORDENADOS POR PAIS  |");
                 printf("\n|==============================|\n");
                 mostrarArrayActor(actorListado,TACTOR);
-
+/*
                 printf("\n|============================================|");
                 printf("\n|  PELICULAS ORDENADAS POR NOMBRE ASCENDENTE |");
                 printf("\n|============================================|\n");
@@ -97,8 +97,20 @@ int main()
                 printf("\n|============================================|\n");
                 ordenarPeliculasPorIdYCritetrio(peliculaListado,TPELICULA,1);
                 mostrarArrayPeliculaConsigna(peliculaListado,TPELICULA);
+*/
 
-                MaxVistas(peliculaListado[TPELICULA],peliculaListado[TPELICULA],TPELICULA);
+                printf("\n|==============================|");
+                printf("\n| Peliculas con genero y actor |");
+                printf("\n|==============================|\n");
+                mostrarPeliculaConGeneroYActor(peliculaListado,actorListado,TPELICULA,TACTOR);
+                printf("|==============================|\n");
+
+                printf("\n|===============================|");
+                printf("\n|Peliculas cuyo actor es de EEUU|");
+                printf("\n|===============================|\n");
+                mostrarPeliculaPaisActorEEUU(peliculaListado,actorListado,TPELICULA,TACTOR);
+                printf("\n|===============================|\n");
+                //MaxVistas(peliculaListado[TPELICULA],peliculaListado[TPELICULA],TPELICULA);
                 break;
 
             case 6:
