@@ -100,7 +100,7 @@
 	"actor.h"
 	"biblioteca.h"
 
-1558293571 c:\programacion\trabajar-en-c\parcial\parcial 1\pelicula.h
+1558299635 c:\programacion\trabajar-en-c\parcial\parcial 1\pelicula.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -124,7 +124,7 @@
 	"actor.h"
 	"biblioteca.h"
 
-1558294358 source:c:\programacion\trabajar-en-c\parcial\parcial 1\main.c
+1558299635 source:c:\programacion\trabajar-en-c\parcial\parcial 1\main.c
 	<stdio.h>
 	<stdlib.h>
 	"genero.h"
@@ -132,7 +132,7 @@
 	"actor.h"
 	"biblioteca.h"
 
-1558294358 source:c:\programacion\trabajar-en-c\parcial\parcial 1\pelicula.c
+1558299635 source:c:\programacion\trabajar-en-c\parcial\parcial 1\pelicula.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -141,7 +141,7 @@
 	"genero.h"
 	"biblioteca.h"
 
-1558282086 source:c:\programacion\trabajar-en-c\parcial\parcial 1\genero.c
+1558299635 source:c:\programacion\trabajar-en-c\parcial\parcial 1\genero.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -154,4 +154,68 @@
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+
+1558018590 source:d:\aaaaaa parcial\trabajar-en-c\parcial\parcial 1\actor.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"genero.h"
+	"pelicula.h"
+	"actor.h"
+	"biblioteca.h"
+
+1558018591 d:\aaaaaa parcial\trabajar-en-c\parcial\parcial 1\genero.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1558025260 d:\aaaaaa parcial\trabajar-en-c\parcial\parcial 1\pelicula.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1558018590 d:\aaaaaa parcial\trabajar-en-c\parcial\parcial 1\actor.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1558018590 d:\aaaaaa parcial\trabajar-en-c\parcial\parcial 1\biblioteca.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1558018590 source:d:\aaaaaa parcial\trabajar-en-c\parcial\parcial 1\biblioteca.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"genero.h"
+	"pelicula.h"
+	"actor.h"
+	"biblioteca.h"
+
+1558026979 source:d:\aaaaaa parcial\trabajar-en-c\parcial\parcial 1\genero.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"pelicula.h"
+	"actor.h"
+	"genero.h"
+	"biblioteca.h"
+
+1558024159 source:d:\aaaaaa parcial\trabajar-en-c\parcial\parcial 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"genero.h"
+	"pelicula.h"
+	"actor.h"
+	"biblioteca.h"
+
+1558027019 source:d:\aaaaaa parcial\trabajar-en-c\parcial\parcial 1\pelicula.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"pelicula.h"
+	"actor.h"
+	"genero.h"
+	"biblioteca.h"
 

@@ -3,14 +3,22 @@
 #include <string.h>
 #define MIN 1
 #define MAX 1000000
+<<<<<<< HEAD
 #define MAXPELICULAS 4
+=======
+#define MAXPELICULAS 6
+>>>>>>> efc625481eba6df2fa2d3699981e2d301c6b996f
 
 #include "pelicula.h"
 #include "actor.h"
 #include "genero.h"
 #include "biblioteca.h"
 
+<<<<<<< HEAD
 ePelicula getPelicula(ePelicula listing[], int len)
+=======
+ePelicula getPelicula(ePelicula lista[], int tam)
+>>>>>>> efc625481eba6df2fa2d3699981e2d301c6b996f
 {
     ePelicula peliculaRetorno;
 
@@ -25,10 +33,16 @@ ePelicula getPelicula(ePelicula listing[], int len)
 
     getActor("",&peliculaRetorno.idActor);
 
+<<<<<<< HEAD
     while(getCodigo("Ingrese el codigo de la pelicula (3 cifras, sin ceros a la izquierda):",&peliculaRetorno.codigoPelicula,listing,len)==0)
+=======
+    /*while(getCodigo("Ingrese el codigo de la pelicula (3 cifras, sin ceros a la izquierda):",&peliculaRetorno.codigoPelicula)==0)
+>>>>>>> efc625481eba6df2fa2d3699981e2d301c6b996f
     {
         printf("ERROR, ingrese un dato valido\n");
-    }
+    }*/
+
+    pedirCodigo(peliculaRetorno,lista,tam);
 
     //getVistas(&peliculaRetorno.vistas);
 
@@ -55,7 +69,45 @@ int getVistas(int *input)
     *input=aux;
 }
 
+<<<<<<< HEAD
 int getCodigo(char mensaje[], int *input,ePelicula listing[],int len)
+=======
+void pedirCodigo(ePelicula retornarPelicula,ePelicula lista[],int tam)
+{
+    int i;
+    do
+    {
+        getInt("Ingrese el codigo del Pelicula : ",&retornarPelicula.codigoPelicula);
+
+        for(i=0;i<tam;i++)
+        {
+            if(retornarPelicula.codigoPelicula==lista[i].codigoPelicula)
+            {
+                printf("Error ese codigo ya existe\n");
+                retornarPelicula.codigoPelicula=-1;
+                break;
+            }
+            if(retornarPelicula.codigoPelicula<100)
+            {
+                printf("Error, ingrese un codigo a partir de 100\n");
+                retornarPelicula.codigoPelicula=-1;
+                break;
+            }
+            if(retornarPelicula.codigoPelicula>999)
+            {
+                printf("Error, ingrese un codigo igual o menor a 999\n");
+                retornarPelicula.codigoPelicula=-1;
+                break;
+            }
+
+
+        }
+    }while(retornarPelicula.codigoPelicula==-1);
+
+}
+
+int getCodigo(char mensaje[], int *input)
+>>>>>>> efc625481eba6df2fa2d3699981e2d301c6b996f
 {
     char ingreso[50];
     int retorno=0;
@@ -128,7 +180,7 @@ void getActor(char mensaje[],int *input[])
 void getGenero(char mensaje[],char input[])
 {
     int aux;
-    while(getInt("ingrese el genero:\n1 para ACCION\n2 para TERROR\n3 para COMEDIA\n4 para OTRO\n",&aux)==0)
+    while(getInt("ingrese el genero:\n1 para ACCION\n2 para TERROR\n3 para ROMANTICA\n4 para COMEDIA\n5 para OTRO\n",&aux)==0)
     {
         printf("ERROR, ingrese un dato valido\n");
     }
@@ -201,8 +253,13 @@ int addPelicula(ePelicula listing[], int len)
 
 void initPelicula(ePelicula listing[],int len)
 {
+<<<<<<< HEAD
     char titulo[MAXPELICULAS][50]={"Terminator","Thor","It","Gladiador"};
     int anioEstreno[MAXPELICULAS]={2020,2019,2018,2018};
+=======
+    char titulo[MAXPELICULAS][50]={"Terminator","Thor","It","Gladiador","Scary Movie","Yo soy asi"};
+    int anioEstreno[MAXPELICULAS]={1994,2005,2012,2004,2012,1990};
+>>>>>>> efc625481eba6df2fa2d3699981e2d301c6b996f
 
     int i;
     for(i = 0 ; i < len ; i++)
@@ -210,10 +267,17 @@ void initPelicula(ePelicula listing[],int len)
         listing[i].id =  i + 1000;
     }
 
+<<<<<<< HEAD
     int codigoPelicula[MAXPELICULAS]={999,666,555,777};
     int idActor[MAXPELICULAS]={1,5,4,4};
     char genero[MAXPELICULAS][50]={"ACCION","ACCION","TERROR","ROMANTICA"};
     //int vistas[MAXPELICULAS]={3000052,7432000,2701001};
+=======
+    int codigoPelicula[MAXPELICULAS]={999,666,555,777,111,222};
+    int idActor[MAXPELICULAS]={1,5,4,4,4,4};
+    int idGenero[MAXPELICULAS]={1,1,2,3,4,5};
+    int vistas[MAXPELICULAS]={3000052,7432000,2701001};
+>>>>>>> efc625481eba6df2fa2d3699981e2d301c6b996f
 
 
     for(i=0;i<MAXPELICULAS;i++)
@@ -276,7 +340,11 @@ int mostrarArrayPelicula(ePelicula listing[], int len)
 
 void printPeliculaConsigna(ePelicula laPelicula)
 {
+<<<<<<< HEAD
     printf(" %d \t%s \t\tCODIGO: %d ID: %d\n", laPelicula.anioEstreno,laPelicula.titulo,laPelicula.codigoPelicula,laPelicula.id);
+=======
+    printf(/*"CODIGO:%d*/ "ID:%d %d \t%s \n",/*laPelicula.codigoPelicula,*/ laPelicula.id, laPelicula.anioEstreno,laPelicula.titulo);
+>>>>>>> efc625481eba6df2fa2d3699981e2d301c6b996f
 }
 
 int mostrarArrayPeliculaConsigna(ePelicula listing[], int len)
@@ -588,27 +656,31 @@ void ordenarPeliculasPorIdYCritetrio(ePelicula lista[],int tam,int criterio)
     }
 }
 
+<<<<<<< HEAD
 /*
 int MaxVistas(ePelicula maximo, ePelicula minimo,int len)
+=======
+int MaxVistas(ePelicula maximo[],int len)
+>>>>>>> efc625481eba6df2fa2d3699981e2d301c6b996f
 {
     int result;
     int max=0;
-    int min=0;
+    //int min=0;
     int i;
 
     for(i=0;i<len;i++)
     {
-        if (maximo.vistas > max)
+        if (maximo[i].vistas > max)
         {
-            max = maximo.vistas;
+            result = max;
         }
-        else
+        /*else
         {
             min = minimo.vistas;
-        }
+        }*/
     }
-    printf("\nLA PELI MAS VISTA ES: %d\n",max);
-    return max;
+    printf("\nLA PELI MAS VISTA ES: %d\n",result);
+    return 0;
 }
 
 int MaxNota(eAlumno maximo[],int len)
@@ -629,10 +701,18 @@ int MaxNota(eAlumno maximo[],int len)
 }
 */
 
+<<<<<<< HEAD
 void mostrarPeliculaConGeneroYActor(ePelicula peliculaListado[], eActor actorListado[], int tamPelicula, int tamActor)
 {
     int i;
     int j;
+=======
+void mostrarPeliculaConGeneroYActor(ePelicula peliculaListado[], eActor actorListado[], eGenero generoListado[], int tamPelicula, int tamActor, int tamGenero)
+{
+    int i;
+    int j;
+    int k;
+>>>>>>> efc625481eba6df2fa2d3699981e2d301c6b996f
     for(i=0;i<tamPelicula;i++)
     {
         if(peliculaListado[i].isEmpty==1) //se usa un for por cada estructura a
@@ -642,16 +722,31 @@ void mostrarPeliculaConGeneroYActor(ePelicula peliculaListado[], eActor actorLis
             {
                 if(peliculaListado[i].idActor==actorListado[j].id)
                 {
+<<<<<<< HEAD
                     printf("*%s - %s - %s\n",peliculaListado[i].titulo,actorListado[j].nombreCompleto,peliculaListado[i].genero);
                     break;
 
+=======
+                    //printf("\n%s %s\n",peliculaListado[i].titulo,actorListado[j].nombreCompleto);
+                    //break; //porque es uno a muchos
+                    for(k=0;k<tamActor;k++)
+                    {
+                        if(peliculaListado[i].idGenero==generoListado[k].id)
+                        {
+                            printf("\n%10s %20s %20s",peliculaListado[i].titulo,actorListado[j].nombreCompleto,generoListado[k].genero);
+                        }
+                    }
+>>>>>>> efc625481eba6df2fa2d3699981e2d301c6b996f
                 }
             }
         }
     }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> efc625481eba6df2fa2d3699981e2d301c6b996f
 void mostrarPeliculaPaisActorEEUU(ePelicula peliculaListado[], eActor actorListado[], int tamPelicula, int tamActor)
 {
     int i;
@@ -668,6 +763,7 @@ void mostrarPeliculaPaisActorEEUU(ePelicula peliculaListado[], eActor actorLista
                     //printf("\n%s",peliculaListado[i].titulo);
                     if(!strcmp(actorListado[j].paisOrigen,"EEUU  "))
                     {
+<<<<<<< HEAD
                         printf("*%s",peliculaListado[i].titulo);
                     }
 
@@ -677,4 +773,14 @@ void mostrarPeliculaPaisActorEEUU(ePelicula peliculaListado[], eActor actorLista
         }
     }
 }
+=======
+                        printf("\n%s",peliculaListado[i].titulo);
+                    }
+>>>>>>> efc625481eba6df2fa2d3699981e2d301c6b996f
 
+                   // break; //porque es uno a muchos
+                }
+            }
+        }
+    }
+}

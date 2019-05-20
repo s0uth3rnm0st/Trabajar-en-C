@@ -99,6 +99,7 @@ int main()
                 mostrarArrayPeliculaConsigna(peliculaListado,TPELICULA);
 */
 
+<<<<<<< HEAD
                 printf("\n|==============================|");
                 printf("\n| Peliculas con genero y actor |");
                 printf("\n|==============================|\n");
@@ -111,6 +112,22 @@ int main()
                 mostrarPeliculaPaisActorEEUU(peliculaListado,actorListado,TPELICULA,TACTOR);
                 printf("\n|===============================|\n");
                 //MaxVistas(peliculaListado[TPELICULA],peliculaListado[TPELICULA],TPELICULA);
+=======
+                printf("\n|============================================|");
+                printf("\n|        PELICULAS CON GENERO Y ACTOR        |");
+                printf("\n|============================================|\n");
+                printf(" PELICULA\t\tACTOR\t\t\tGENERO\n");
+                printf("-------------------------------------------------------\n");
+                mostrarPeliculaConGeneroYActor(peliculaListado,actorListado,generoListado,TPELICULA,TACTOR,TGENERO);
+                printf("\n\n");
+
+                printf("\n|===============================================|");
+                printf("\n|PELICULAS CUYO ACTORES PRINCIPALES SEAN DE EEUU|");
+                printf("\n|===============================================|\n");
+                mostrarPeliculaPaisActorEEUU(peliculaListado,actorListado,TPELICULA,TACTOR);
+                printf("\n\n");
+                //MaxVistas(peliculaListado,TPELICULA);
+>>>>>>> efc625481eba6df2fa2d3699981e2d301c6b996f
                 break;
 
             case 6:

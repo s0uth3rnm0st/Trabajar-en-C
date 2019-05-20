@@ -18,11 +18,17 @@ typedef struct
 
 }ePelicula;
 
-ePelicula getPelicula();
+ePelicula getPelicula(ePelicula lista[], int tam);
 
 int getCodigo(char mensaje[], int *input,ePelicula listing[],int len);
 
+<<<<<<< HEAD
 void getGenero(char mensaje[],char input[]);
+=======
+void pedirCodigo(ePelicula retornarPelicula,ePelicula lista[],int tam);
+
+void getGenero(char mensaje[],int *input[]);
+>>>>>>> efc625481eba6df2fa2d3699981e2d301c6b996f
 
 void getActor(char mensaje[],int *input[]);
 
@@ -48,7 +54,11 @@ void sortAnio(ePelicula listing[], int len);
 
 int getVistas(int *input);
 
+<<<<<<< HEAD
 //int MaxVistas(ePelicula maximo, ePelicula minimo,int len);
+=======
+int MaxVistas(ePelicula maximo[],int len);
+>>>>>>> efc625481eba6df2fa2d3699981e2d301c6b996f
 
 //void mostrarPeliculaConActor(ePelicula peliculaListado[], eActor actorListado[], int tamPelicula, int tamActor);
 //NO RECONOCE A eActor, FUNCION SIN PROTOTIPO
