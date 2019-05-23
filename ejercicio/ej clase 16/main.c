@@ -5,7 +5,6 @@ typedef struct
 {
     char name[50];
     int age;
-    char id[50];
 }S_Person;
 
 int loadPerson(S_Person* pPerson);
@@ -27,24 +26,19 @@ int main()
 int loadPerson(S_Person* pPerson)
 {
     int ret=1;
-    getString("Ingrese nombre",pPerson->name);
+    getString("Ingrese nombre ",pPerson->name);
 
-    pPerson->age = getInt("Ingrese la edad");
+    pPerson->age = getInt("Ingrese la edad ");
     if(pPerson->age<=0 || pPerson->age>100)
     {
         ret=0;
     }
-    if(getStringNumeros("ingrese el dni",pPerson->id)==0)
-    {
-        ret=0;
-    }
-
 
     return ret;
 }
 
 void printPerson(S_Person* pPerson)
 {
-    printf("Nombre: %s Edad: %d DNI: %s",pPerson->name,pPerson->age,pPerson->id);
+    printf("Nombre: %s, Edad: %d",pPerson->name,pPerson->age);
 }
 

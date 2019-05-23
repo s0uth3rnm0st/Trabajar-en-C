@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1558623189 source:d:\demian murray\semana_8\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+
+1558623857 source:c:\programacion\trabajar-en-c\clases\clase 17\semana_8\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+
