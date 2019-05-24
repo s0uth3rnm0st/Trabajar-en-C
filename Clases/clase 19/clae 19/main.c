@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #define T 5
 
-    typedef struct
-    {
-        int id;
-        char name[50];
-        float sueldo;
-    }eEmployee;
+typedef struct
+{
+    int id;
+    char name[50];
+    float sueldo;
+}eEmployee;
 
 
 
@@ -88,6 +88,8 @@ int main()
             printf("%d\n",*(x+i));
         }
     }
+
+
 
     return 0;
 }
