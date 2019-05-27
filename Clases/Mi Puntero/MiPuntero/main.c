@@ -42,6 +42,8 @@ int main()
     printf("Dir. de mem de auxChar1: %d\n",&auxChar1);
     printf("Dir. guardada en auxInt: %d\n",auxInt);
 
+    /*************************************************************************/
+    //stack
 
 
 

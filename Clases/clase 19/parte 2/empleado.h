@@ -13,6 +13,7 @@ typedef struct
 eEmployee* nuevoEmpleado(); //constructor por defecto
 eEmployee* nuevoEmpleadoParametros(int, char*, float);
 void mostrarEmpleado(eEmployee*);
+eEmployee* getEmployee();
 int setLegajo(eEmployee*,int);
 int getLegajo(eEmployee*);//devuelve el tipo de dato asociado con el campo
 int setNombre(eEmployee*,char*);

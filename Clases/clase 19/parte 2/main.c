@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include "empleado.h"
-#define T 5
+#define T 10
 
 /**hacer un destructor con free, demas setters y getters, hacer un array de empleados*/
 
@@ -11,6 +11,7 @@ int main()
     //eEmployee* unEmpleado //= (eEmployee*) malloc(sizeof(eEmployee)); //consigo espacio en mem para unEmpleado, PERO SE NECESITA HACER ESTO EN UNA FUNC
     eEmployee* unEmpleado=nuevoEmpleadoParametros(1000,"Pedro",10000);
     eEmployee* otroEmpleado = nuevoEmpleadoParametros(1001,"Maria",2000);
+    eEmployee* empleadoArray;
 
     //no esta muy bien usar ->, malloc, calloc, etc en el main (encapsulamiento)
 
@@ -41,6 +42,10 @@ int main()
             break;
 
     }
+/*
+    initEmployees(empleadoArray,T);
+    printEmployeeList(empleadoArray,T);
+*/
 
     return 0;
 }

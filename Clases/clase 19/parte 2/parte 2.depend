@@ -3,16 +3,27 @@
 	<stdio.h>
 	<stdlib.h>
 
-1558805261 source:c:\programacion\trabajar-en-c\clases\clase 19\parte 2\main.c
+1558983878 source:c:\programacion\trabajar-en-c\clases\clase 19\parte 2\main.c
 	<stdlib.h>
 	"empleado.h"
 
-1558808125 c:\programacion\trabajar-en-c\clases\clase 19\parte 2\empleado.h
+1558810579 c:\programacion\trabajar-en-c\clases\clase 19\parte 2\empleado.h
 	<stdio.h>
 	<string.h>
 
-1558808170 source:c:\programacion\trabajar-en-c\clases\clase 19\parte 2\empleado.c
+1558983878 source:c:\programacion\trabajar-en-c\clases\clase 19\parte 2\empleado.c
 	<stdio.h>
 	<stdlib.h>
 	"empleado.h"
+	"biblioteca.h"
+
+1558810694 source:c:\programacion\trabajar-en-c\clases\clase 19\parte 2\biblioteca.c
+	<stdio.h>
+	<stdlib.h>
+	"empleado.h"
+	"biblioteca.h"
+
+1558810694 c:\programacion\trabajar-en-c\clases\clase 19\parte 2\biblioteca.h
+	<stdio.h>
+	<string.h>
 
