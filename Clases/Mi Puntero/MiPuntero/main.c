@@ -45,6 +45,14 @@ int main()
     /*************************************************************************/
     //stack
 
+    /*
+    Es probable que la otra func que hice en clase tiraba basura por no referenciarla con punteros
+    (mirar video punteros parte 1)
+    */
+    /*************************************************************************/
+    //malloc, realloc, etc
+
+
 
 
     return 0;
