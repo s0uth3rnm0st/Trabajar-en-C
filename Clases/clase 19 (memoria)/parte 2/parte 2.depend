@@ -27,3 +27,27 @@
 	<stdio.h>
 	<string.h>
 
+1559217288 source:d:\aaaaaa\trabajar-en-c\clases\clase 19 (memoria)\parte 2\biblioteca.c
+	<stdio.h>
+	<stdlib.h>
+	"empleado.h"
+	"biblioteca.h"
+
+1559217289 d:\aaaaaa\trabajar-en-c\clases\clase 19 (memoria)\parte 2\empleado.h
+	<stdio.h>
+	<string.h>
+
+1559217288 d:\aaaaaa\trabajar-en-c\clases\clase 19 (memoria)\parte 2\biblioteca.h
+	<stdio.h>
+	<string.h>
+
+1559217729 source:d:\aaaaaa\trabajar-en-c\clases\clase 19 (memoria)\parte 2\empleado.c
+	<stdio.h>
+	<stdlib.h>
+	"empleado.h"
+	"biblioteca.h"
+
+1559217289 source:d:\aaaaaa\trabajar-en-c\clases\clase 19 (memoria)\parte 2\main.c
+	<stdlib.h>
+	"empleado.h"
+

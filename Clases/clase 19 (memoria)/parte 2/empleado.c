@@ -136,12 +136,12 @@ int setSueldo(eEmployee* this, float sueldo)
 
 int getSueldo(eEmployee* pEmpleado)
 {
-    int retornoLegajo=0;
+    int retornoSueldo=0;
     if(pEmpleado!=NULL)
     {
-        //retornoLegajo=pEmpleado->sueldo;
+        retornoSueldo=pEmpleado->sueldo;
     }
-    return retornoLegajo;
+    return retornoSueldo;
 }
 /****************************************************************************************/
 

@@ -23,6 +23,11 @@ int main()
     {
         mostrarEmpleado(unEmpleado);
     }
+    printf("\nFiltro (sueldo=2000):\n");
+    if(getSueldo(otroEmpleado)==2000)
+    {
+        mostrarEmpleado(otroEmpleado);
+    }
     printf("\n");
 
     int opcion;
@@ -42,10 +47,7 @@ int main()
             break;
 
     }
-/*
-    initEmployees(empleadoArray,T);
-    printEmployeeList(empleadoArray,T);
-*/
+
 
     return 0;
 }
