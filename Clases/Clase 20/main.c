@@ -9,12 +9,12 @@
 int main()
 {
     FILE *pArchivo;
-    int nombre[70],nota[70],legajo[70];
+    char nombre[70],nota[70],legajo[70];
     Alumno unAlumno;
     Alumno lista[50];
     int contador=0;
 
-  /*  printf("%p",pArchivo);
+    printf("%p",pArchivo);
     printf("\n");
     if((pArchivo=fopen(ARCHIVO,"a"))==NULL) //a guarda datos, w los sobreescribe
     {
@@ -37,8 +37,7 @@ int main()
     int largo= strlen(texto);
     fwrite(texto, sizeof(char),largo,pArchivo);//no tiene & porque ya es una direc por el []
     fclose(pArchivo);
-*/
-/*
+
     if((pArchivo=fopen(ARCHIVO,"r"))==NULL)
     {
         printf("no se pudo leer");
@@ -55,8 +54,8 @@ int main()
             //leo el archivo, lo parseo a un array, uso filtro
         }
     }
-*/
 
+/*
     if((pArchivo=fopen(ARCHIVO,"r"))==NULL)
     {
         printf("no se pudo leer");
@@ -67,7 +66,7 @@ int main()
         fscanf(pArchivo, "%[^,],%[^,],%[^\n]\n", nombre, nota, legajo);
         while(!feof(pArchivo))
         {
-            fscanf(pArchivo, "%[^,],%[^,],%[^,],%[^\n]\n", nombre, nota, legajo);
+            fscanf(pArchivo, "%[^,],%[^,],%[^\n]\n", nombre, nota, legajo);
             unAlumno.nota=atoi(nota);
             unAlumno.legajo=atoi(legajo);
             strcpy(unAlumno.nombre,nombre);
@@ -82,7 +81,7 @@ int main()
         {
                printf("%s - %d - %d\n", lista[i].nombre, lista[i].nota, lista[i].legajo);
         }
-    }
+    }*/
 
     return 0;
 }
