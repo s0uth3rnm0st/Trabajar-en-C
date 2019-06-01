@@ -29,29 +29,39 @@ int main()
     }
     //else
 
+    fscanf(pArchivo,"%[^,],%[^,],%[^\n]\n",nombre,legajo,nota); //es para la primer fila que suele tener todos char
+  /*strcpy(unAlumno.nombre,nombre);
+    unAlumno.legajo=atoi(legajo);
+    unAlumno.nota=atoi(nota);*/
 
-    //fscanf(pArchivo,"%[^;],%[^;],%[^\n]\n",nombre,legajo,nota);
+    printf("%s  -- %s -- %s",nombre,legajo,nota);
+    printf("\n");
     while(!feof(pArchivo))
     {
         fscanf(pArchivo,"%[^,],%[^,],%[^\n]\n",nombre,legajo,nota);
 
-        strcpy(unAlumno.nombre,nombre);
-        unAlumno.legajo=legajo;
-        unAlumno.nota=nota;
-        printf("NOMBRE: %s -- LEG: %s -- NOTA: %s",nombre,legajo,nota);
+        printf("%s \t-- %s \t  -- %s",nombre,legajo,nota);
         printf("\n");
 
+        strcpy(unAlumno.nombre,nombre);
+        unAlumno.legajo=atoi(legajo);
+        unAlumno.nota=atoi(nota);
         lista[contador]=unAlumno;
+
         contador++;
     }
 
     int i;
     fclose(pArchivo);
-/*
-    for(i=0; i<51; i++)
+
+    printf("\nESTRUCTURA: \n");
+    for(i=0; i<3; i++)
     {
         printf("%s - %d - %d\n", lista[i].nombre, lista[i].legajo, lista[i].nota);
+       // break;
     }
-*/
+
     return 0;
 }
+
+
