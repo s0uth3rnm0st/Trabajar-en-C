@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1559569106 source:c:\users\alumno\desktop\punteropuntero\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1559569106 source:d:\1aaaaa\trabajar-en-c\info\pfunc\punteropuntero\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
