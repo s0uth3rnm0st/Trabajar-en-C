@@ -17,7 +17,7 @@ eEmployee* getEmployee();
 int setLegajo(eEmployee*,int);
 int getLegajo(eEmployee*);//devuelve el tipo de dato asociado con el campo
 int setNombre(eEmployee*,char*);
-
+int getNombre(eEmployee* pEmpleado);
 int setSueldo(eEmployee*,float);
 int getSueldo(eEmployee*);
 void employee_free(eEmployee * this);

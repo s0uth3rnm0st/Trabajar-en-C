@@ -51,3 +51,27 @@
 	<stdlib.h>
 	"empleado.h"
 
+1560006019 source:d:\1aaaaaa\trabajar-en-c\clases\clase 19 (memoria)\parte 2\biblioteca.c
+	<stdio.h>
+	<stdlib.h>
+	"empleado.h"
+	"biblioteca.h"
+
+1560003182 d:\1aaaaaa\trabajar-en-c\clases\clase 19 (memoria)\parte 2\empleado.h
+	<stdio.h>
+	<string.h>
+
+1560006019 d:\1aaaaaa\trabajar-en-c\clases\clase 19 (memoria)\parte 2\biblioteca.h
+	<stdio.h>
+	<string.h>
+
+1560004721 source:d:\1aaaaaa\trabajar-en-c\clases\clase 19 (memoria)\parte 2\main.c
+	<stdlib.h>
+	"empleado.h"
+
+1560005724 source:d:\1aaaaaa\trabajar-en-c\clases\clase 19 (memoria)\parte 2\empleado.c
+	<stdio.h>
+	<stdlib.h>
+	"empleado.h"
+	"biblioteca.h"
+

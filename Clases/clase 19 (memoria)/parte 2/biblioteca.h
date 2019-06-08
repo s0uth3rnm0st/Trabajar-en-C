@@ -4,6 +4,6 @@
 #define EMPLEADO_H_INCLUDED
 
 int getInt(char mensaje[], int *input);
-
+int getString(char mensaje[],char* input);
 
 #endif // BIBLIOTECA_H_INCLUDED

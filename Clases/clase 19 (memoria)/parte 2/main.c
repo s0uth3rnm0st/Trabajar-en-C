@@ -28,7 +28,21 @@ int main()
     {
         mostrarEmpleado(otroEmpleado);
     }
-    printf("\n");
+    /*printf("\nFiltro (nombre=Pedro):\n");
+    if(getNombre(unEmpleado)==1)
+    {
+        mostrarEmpleado(unEmpleado);
+    }
+    printf("\n");*/
+
+   /* while(getNombre(empleadoArray)==0)
+    {
+        printf("error");
+    }*/
+    char nombre[50];
+    getString("ingrse un nombre: ",empleadoArray->nombre);
+
+    printf("%s\n",empleadoArray->nombre);
 
     int opcion;
     printf("presiones 1 para borrar a pedro: ");

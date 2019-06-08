@@ -33,55 +33,6 @@ void mostrarEmpleado(eEmployee* unEmpleado)
         isNull=0;
     }
 }
-/*
-void initEmployees (eEmployee* employeeList , int* len)
-{
-    int i;
-    char nombre [10] [20] = {"AAA", "BBB", "CCC", "DDD", "EEE", "FFF", "GGG", "HHH", "III" , "JJJ"};
-    int legajo [10] = {10 , 20 ,30,40,50,60,70,80,90,100};
-    float sueldo [10] ={100,200,300,400,500,600,700,800,100};
-    if (employeeList != NULL )
-    {
-        eEmployee* auxPointer;
-        for ( i = 0 ; i < 10 ; i++ )
-        {
-            auxPointer = (eEmployee*)realloc(employeeList, (sizeof(eEmployee)) * (*len+1) );
-            *len += 1;
-            if ( auxPointer != employeeList && auxPointer != NULL)
-            {
-                employeeList = auxPointer;
-            }
-            (employeeList+i) ->legajo = legajo[i];
-            strcpy((employeeList+i) ->nombre,nombre[i]);
-            (employeeList+i) ->sueldo = sueldo[i];
-        }
-
-    }
-
-}
-
-void printEmployeeList (eEmployee* employeeList , int* len)
-{
-    int i;
-    for (i = 0 ; i < len ; i++ )
-    {
-        printOneEmployee(employeeList+i);
-    }
-}
-void printOneEmployee (eEmployee* employeeList)
-{
-    if (employeeList != NULL)
-    {
-        //if (employeeList->isEmpty == 0)
-        //{
-            printf("\nNombre: %s", employeeList->nombre);
-            printf("\nlegajo: %d\n", employeeList->legajo);
-            printf("\nsueldo: %f\n", employeeList->sueldo);
-
-        //}
-    }
-}
-*/
 
 /****************************************************************************************/
 int setLegajo(eEmployee* this, int legajo)
@@ -114,15 +65,15 @@ int setNombre(eEmployee* this, char* nombre)
     }
 }
 
-/*int getLegajo(eEmployee* pEmpleado)
+int getNombre(eEmployee* pEmpleado)
 {
-    int retornoLegajo=0;
+    int retornoNombre=1;
     if(pEmpleado!=NULL)
     {
-        retornoLegajo=pEmpleado->legajo;
+
     }
-    return retornoLegajo;
-}*/
+    return retornoNombre;
+}
 
 int setSueldo(eEmployee* this, float sueldo)
 {
@@ -145,13 +96,7 @@ int getSueldo(eEmployee* pEmpleado)
 }
 /****************************************************************************************/
 
-
-
-
-
-
 void employee_free(eEmployee * this)
 {
-    // Do any other freeing required here.
     free(this);
 }
