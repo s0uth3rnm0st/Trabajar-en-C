@@ -1,0 +1,42 @@
+typedef struct
+{ 	int legajo;
+ 	float nota;
+}eAlumno;
+
+int main()
+{
+	eAlumno* alumno;
+
+	alumnoNew(alumno);
+	setAlumnoLegajo(alumno, 325);
+	setAlumnoNota(alumno,8.50);
+
+
+}
+
+int alumnoNew(eAlumno* alumno)
+{
+	alumno=(eAlumno*)malloc(sizeof(eAlumno));
+}
+
+int setAlumnoLegajo(eAlumno* alumno, int legajo)
+{
+	int retorno=0;
+	if(alumno!=NULL)
+	{
+		alumno->legajo=legajo;
+		retorno=1;
+	}
+	return retorno;
+}
+
+int setAlumnoNota(eAlumno* alumno, float nota)
+{
+	int retorno=0;
+	if(alumno!=NULL)
+	{
+		alumno->nota=nota;
+		retorno=1;
+	}
+	return retorno;
+}

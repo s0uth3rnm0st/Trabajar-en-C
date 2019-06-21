@@ -1,0 +1,3 @@
+Si p contiene la dirección de memoria de x ¿Cómo asigno el valor 0 a x empleando el puntero? *
+Si p es un puntero, ¿que representa el nombre de un vector cuando escribimos p=vector?:
+Suponiendo una función con el siguiente prototipo void funcion(int * pVector), ¿cómo podría ser la llamada a dicha función?
