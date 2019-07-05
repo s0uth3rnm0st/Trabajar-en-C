@@ -11,6 +11,7 @@ int main()
     //eEmployee* unEmpleado //= (eEmployee*) malloc(sizeof(eEmployee)); //consigo espacio en mem para unEmpleado, PERO SE NECESITA HACER ESTO EN UNA FUNC
     eEmployee* unEmpleado=nuevoEmpleadoParametros(1000,"Pedro",10000);
     eEmployee* otroEmpleado = nuevoEmpleadoParametros(1001,"Maria",2000);
+    eEmployee auxEmployee;
     eEmployee* empleadoArray;
 
     //no esta muy bien usar ->, malloc, calloc, etc en el main (encapsulamiento)
@@ -28,22 +29,15 @@ int main()
     {
         mostrarEmpleado(otroEmpleado);
     }
-    /*printf("\nFiltro (nombre=Pedro):\n");
-    if(getNombre(unEmpleado)==1)
+/********************************************************************************************/
+    empleadoArray=&auxEmployee;
+    while(getNombre(empleadoArray)==0)
     {
-        mostrarEmpleado(unEmpleado);
+        printf("Error, re");
     }
-    printf("\n");*/
-
-   /* while(getNombre(empleadoArray)==0)
-    {
-        printf("error");
-    }*/
-    char nombre[50];
-    getString("ingrse un nombre: ",empleadoArray->nombre);
 
     printf("%s\n",empleadoArray->nombre);
-
+/********************************************************************************************/
     int opcion;
     printf("presiones 1 para borrar a pedro: ");
     scanf("%d",&opcion);

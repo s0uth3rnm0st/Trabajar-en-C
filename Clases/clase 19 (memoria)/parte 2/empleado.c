@@ -67,10 +67,17 @@ int setNombre(eEmployee* this, char* nombre)
 
 int getNombre(eEmployee* pEmpleado)
 {
-    int retornoNombre=1;
+    int retornoNombre=0;
     if(pEmpleado!=NULL)
     {
-
+        if(getString("ingrese el nombre: ",pEmpleado->nombre)==0)
+        {
+            retornoNombre=0;
+        }
+        else
+        {
+            retornoNombre=1;
+        }
     }
     return retornoNombre;
 }

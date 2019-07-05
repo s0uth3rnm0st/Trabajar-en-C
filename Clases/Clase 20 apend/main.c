@@ -11,8 +11,8 @@ int main()
     FILE *pArchivo;
     char nombre[70],nota[70],legajo[70];
     Alumno unAlumno;
-    Alumno lista[50];
-    int contador=0;
+    //Alumno lista[50];
+    //int contador=0;
 
     printf("%p",pArchivo);
     printf("\n");
@@ -37,6 +37,10 @@ int main()
     int largo= strlen(texto);
     fwrite(texto, sizeof(char),largo,pArchivo);//no tiene & porque ya es una direc por el []
     fclose(pArchivo);
+
+
+
+
 
     if((pArchivo=fopen(ARCHIVO,"r"))==NULL)
     {

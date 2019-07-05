@@ -75,3 +75,27 @@
 	"empleado.h"
 	"biblioteca.h"
 
+1560093581 source:c:\programacion\trabajar-en-c\clases\clase 19 (memoria)\parte 2\biblioteca.c
+	<stdio.h>
+	<stdlib.h>
+	"empleado.h"
+	"biblioteca.h"
+
+1560093581 c:\programacion\trabajar-en-c\clases\clase 19 (memoria)\parte 2\empleado.h
+	<stdio.h>
+	<string.h>
+
+1560093581 c:\programacion\trabajar-en-c\clases\clase 19 (memoria)\parte 2\biblioteca.h
+	<stdio.h>
+	<string.h>
+
+1560103110 source:c:\programacion\trabajar-en-c\clases\clase 19 (memoria)\parte 2\empleado.c
+	<stdio.h>
+	<stdlib.h>
+	"empleado.h"
+	"biblioteca.h"
+
+1560103110 source:c:\programacion\trabajar-en-c\clases\clase 19 (memoria)\parte 2\main.c
+	<stdlib.h>
+	"empleado.h"
+
